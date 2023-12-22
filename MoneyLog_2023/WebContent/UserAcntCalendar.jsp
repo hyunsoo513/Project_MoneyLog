@@ -99,17 +99,17 @@
 		
 		// 함수 만들어서 날을 넣고 꺼내야함 이거 jstl로 수정하기?		
 		if(selectYear==nowYear && selectMonth == nowMonth && i==nowDay && week%7==0) //-- 토요일인 오늘
-			calStr += "<td class='nowSat'>"+"<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,000<br>지출 : 1,000</span></a></td>";
+			calStr += "<td class='nowSat'>"+"<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,000<br>지출 : 1,000</span></a></td>";
 		else if (selectYear==nowYear && selectMonth == nowMonth && i==nowDay && week%7==1) //-- 일요일인 오늘
-			calStr += "<td class='nowSun'>" + "<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,100<br>지출 : 1,100</span></a></td>";
+			calStr += "<td class='nowSun'>" + "<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,100<br>지출 : 1,100</span></a></td>";
 		else if(selectYear==nowYear && selectMonth == nowMonth && i==nowDay)		//-- 평일인 오늘
-			calStr += "<td class='now'>" + "<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,200<br>지출 : 1,200</span></a></td>";
+			calStr += "<td class='now'>" + "<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,200<br>지출 : 1,200</span></a></td>";
 		else if (week%7==0)															//-- 오늘이 아닌 토요일
-			calStr += "<td class='sat'>" + "<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,300<br>지출 : 1,300</span></a></td>";
+			calStr += "<td class='sat'>" + "<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,300<br>지출 : 1,300</span></a></td>";
 		else if (week%7==1)															//-- 오늘이 아닌 일요일
-			calStr += "<td class= 'sun'>" + "<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,400<br>지출 : 1,400</span></a></td>";
+			calStr += "<td class= 'sun'>" + "<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,400<br>지출 : 1,400</span></a></td>";
 		else																		//-- 오늘이 아닌 평일
-			calStr += "<td>" + "<a href='useracntdaylist.action' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,500<br>지출 : 1,500</span></a></td>";
+			calStr += "<td>" + "<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,500<br>지출 : 1,500</span></a></td>";
 			
 		if(week%7 == 0)
 			calStr += "</tr><tr>";

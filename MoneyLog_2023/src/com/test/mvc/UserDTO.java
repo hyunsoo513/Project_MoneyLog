@@ -3,6 +3,7 @@ package com.test.mvc;
 public class UserDTO
 {
 	private String user_dstn_cd, user_name, user_id, user_pw, year, month;
+
 	private String acnt_cd, acnt_date, cate_fst_cd, cate_fst_name, cate_sec_cd, cate_sec_name, inout_cd, inout_cont, acnt_dtl_cont, amnt; 
 	private String ban_date;
 	
@@ -615,4 +616,5 @@ public class UserDTO
 	{
 		this.leave_date = leave_date;
 	}
+	
 }

@@ -135,6 +135,8 @@
 		});
 	}
 */
+
+
 </script>
 </head>
 <body>
@@ -145,7 +147,7 @@
      <div class="container mt-3">
       	<div class="row">
       		<div class="col-12" style="text-align: center;">
-    			<h2>${sessionScope.month}월 ${sessionScope.day}일 가계부</h2>
+    			<h2>${sessionScope.month}월 ${param.day}일 가계부</h2>
     		</div>
 	    </div>
 		<form class="row mt-3" action="acntreg.action" method="post" id="enterAcnt">
