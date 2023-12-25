@@ -28,7 +28,7 @@
 		<div class="collapse navbar-collapse justify-content-end"
 			id="navbar">
 			<div class="navbar-nav mr-sm-2">
-				<a class="nav-item nav-link active" href="#">회원가입</a>
+				<a class="nav-item nav-link active" href="usersuterms.action">회원가입</a>
 				<a class="nav-item nav-link" href="loginform.action">로그인</a>
 			</div>
 		</div>

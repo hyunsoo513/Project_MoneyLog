@@ -97,7 +97,6 @@
 	{
 		week++;								//-- 날짜가 하루씩 찍힐 때 마다(구성이 이루어질 때 마다) 요일도 함께 1씩 증가~!!!	check~!!!
 		
-		// 함수 만들어서 날을 넣고 꺼내야함 이거 jstl로 수정하기?		
 		if(selectYear==nowYear && selectMonth == nowMonth && i==nowDay && week%7==0) //-- 토요일인 오늘
 			calStr += "<td class='nowSat'>"+"<a href='useracntdaylist.action?day="+i+"' style='text-decoration:none'>" + i + "<br><span class='mobile'>수입 : 1,000<br>지출 : 1,000</span></a></td>";
 		else if (selectYear==nowYear && selectMonth == nowMonth && i==nowDay && week%7==1) //-- 일요일인 오늘

@@ -16,12 +16,26 @@ public class UserDTO
     , cmnt_cont, cmnt_date, qna_cd, qna_title, qna_date, qna_view, qna_cont
     , leave_id, leave_name, leave_pw, leave_tel, leave_date;
 	
+	private String day;
+	
+
+	// day 추가
+	public String getDay()
+	{
+		return day;
+	}
+
+	public void setDay(String day)
+	{
+		this.day = day;
+	}
+
+	
 	// getter / setter 구성
 	public String getUser_dstn_cd()
 	{
 		return user_dstn_cd;
 	}
-
 	public String getQna_cont()
 	{
 		return qna_cont;

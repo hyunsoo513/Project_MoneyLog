@@ -62,6 +62,11 @@
                         <a href="findpw.action">비밀번호 찾기</a>
                     </div>
                     <br>
+                    <br>
+                    <div>
+                    	
+                    </div>
+                    
                     <div>
                        <span id="err" style="color: red; display: none;"></span>
                     </div>

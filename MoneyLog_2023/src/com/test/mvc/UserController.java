@@ -203,16 +203,22 @@ public class UserController
 	
 	// 당일 가계부 리스트 출력
 	@RequestMapping(value="/useracntdaylist.action", method = {RequestMethod.GET, RequestMethod.POST})	// 원래 GET 처리!!!!
-	public ModelAndView acntDayInoutList(UserDTO dto, HttpSession session)
+	public ModelAndView acntDayInoutList(UserDTO dto, HttpSession session, HttpServletRequest request, HttpServletResponse response)
 	{
 		IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
 		
 		ModelAndView mv = new ModelAndView();
-
+		
 		String session_user_dstn_cd = (String)session.getAttribute("user_dstn_cd");  //session 객체에서 세션으로 set된 값 get으로 가져오기
 		String session_user_name = (String)session.getAttribute("user_name"); 		//session 객체에서 세션으로 set된 값 get으로 가져오기
 		String session_year = (String)session.getAttribute("year");
 		String session_month = (String)session.getAttribute("month");
+		
+		// param 으로 받은 day session 저장
+		String day = request.getParameter("day");
+		session.setAttribute("day", day);
+		String session_day = (String)session.getAttribute("day");
+		dto.setDay(session_day);
 		
 		dto.setUser_dstn_cd(session_user_dstn_cd);
 		dto.setUser_name(session_user_name);
@@ -249,8 +255,10 @@ public class UserController
 		String acnt_dtl_cont = request.getParameter("acnt_dtl_cont");
 		String amnt = request.getParameter("amnt");
 		
-		dto.setUser_dstn_cd(session_user_dstn_cd);
+		String session_day = (String)session.getAttribute("day");
+		dto.setDay(session_day);
 		
+		dto.setUser_dstn_cd(session_user_dstn_cd);
 		dto.setYear(session_year);
 		dto.setMonth(session_month);
 		dto.setCate_sec_cd(cate_sec_cd);
