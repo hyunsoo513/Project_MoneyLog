@@ -6,12 +6,15 @@ public interface IMoneyDAO
 {
 	// ○ 머니리뷰 ===========================
 	
-	// 모든 머니리뷰 수 (페이징)
+	// 모든 머니리뷰 수 (페이징) (★ 공개된 머니리뷰)
 	public int allPostCount();
 	
 	// 머니리뷰 리스트 가져오기
 	public ArrayList<MoneyDTO> getPostList(MoneyDTO dto);
 	
+ 	// 머니리뷰 조회수 증가
+ 	public Integer postViewPlus(MoneyDTO dto);
+ 	
 	
 	// 마이태그 가져오기
 	public String myTag(MoneyDTO dto);
@@ -95,11 +98,62 @@ public interface IMoneyDAO
 	// 머니리뷰 댓글 삭제
 	public int cmntDel(MoneyDTO dto);
 	
-	// 게시글 신고 - 게시글 번호 구하기
-	public int postReptRnum(String post_cd);
+	// 게시글 신고 - rnum 으로 구하기
+	public ArrayList<MoneyDTO> postReptRnum(String post_cd);
 	
-	// 게시글 신고 - 게시글 작성자 구하기
-	public String postReptUser (String post_cd);
+	// 게시글 신고
+	public int postRept (MoneyDTO dto);
+	
+	// 게시글 신고 (기타)
+	public int postReptDtl (MoneyDTO dto);
+	
+	// 댓글 신고 - rnum 으로 구하기
+	public ArrayList<MoneyDTO> cmntReptRnum(String cmnt_cd);
+	
+	// 게시글 신고
+	public int cmntRept (MoneyDTO dto);
+	
+	// 게시글 신고 (기타)
+	public int cmntReptDtl (MoneyDTO dto);
 	
 	// =========================== 머니리뷰 끝
+	
+	// ▼ 관리자
+	
+	// 모든 머니리뷰 수 (페이징) (★ 전체 머니리뷰)
+	public int totalPostCount();
+		
+	// 모든 머니리뷰 수 (페이징) (★ 비공개된 머니리뷰)
+	public int privatePostCount();
+	
+	// 머니리뷰 전체 리스트 가져오기
+	public ArrayList<MoneyDTO> getPostListAll(MoneyDTO dto);
+	
+	// 머니리뷰 비공개 리스트 가져오기
+	public ArrayList<MoneyDTO> getPostListPrivate(MoneyDTO dto);
+	
+	// 머니리뷰 게시글 상세정보
+	public ArrayList<MoneyDTO> getPostInfo(MoneyDTO dto);
+	
+	// 모든 댓글 수 (페이징) (★ 전체 댓글)
+	public int totalCmntCount();
+	
+	// 모든 댓글 수 (페이징) (★ 공개 댓글)
+	public int openCmntCount();
+		
+	// 모든 댓글 수 (페이징) (★ 비공개 댓글)
+	public int privateCmntCount();
+	
+	// 댓글 전체 리스트 가져오기
+	public ArrayList<MoneyDTO> getCmntListAll(MoneyDTO dto);
+	
+	// 댓글 공개 리스트 가져오기
+	public ArrayList<MoneyDTO> getCmntListOpen(MoneyDTO dto);
+	
+	// 댓글 비공개 리스트 가져오기
+	public ArrayList<MoneyDTO> getCmntListPrivate(MoneyDTO dto);
+	
+	// 머니리뷰 댓글 상세정보
+	public ArrayList<MoneyDTO> getCmntInfo(MoneyDTO dto);
+		
 }

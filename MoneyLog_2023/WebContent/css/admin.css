@@ -21,52 +21,53 @@ h3, h4{font-weight: 700;}
 h5, h6{font-weight: 500;}
 
 header {position: fixed; top: 0; z-index: 100; width: 100vw;}
-/*로그인스타일*/
+/*�α��ν�Ÿ��*/
 section > .container {margin-top: 55px}
-/*메인스타일*/
+/*���ν�Ÿ��*/
 main { margin-left: 250px; margin-top: 55px; margin-right: 100px;}
-/*버튼 스타일*/
+/*��ư ��Ÿ��*/
 .btn {background-color: #FF9B85; border: none;}
-.btn:hover {background-color: #EF6E6B; border-radius: 4px;}
+.btn:hover {background-color: #EF6E6B; border-radius: 4px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
 
 /*AdLogin.jsp*/
 .login-title {margin-top: 100px; }
 .login-title > div {text-align: center;}
 .login-title > div > h1 {color: #FF9B85; margin: 40px; font-size: 50px;}
 #loginForm {width: 300px; background-color: #FFD97D; color: #9b9b9b; border-radius: 5px; margin-left: auto; margin-right: auto; padding: 20px;}
-#loginForm .text-field {width: 100%; font-size: 14px; margin-bottom: 10px; padding: 10px; border-radius: 5px;}
+#loginForm .text-field { width: 100%; font-size: 14px; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
 #loginForm #loginBtn { width: 260px; margin-bottom: 10px; padding: 10px; border-radius: 5px; background-color: #FF9B85; border: none;}
+#loginForm #loginBtn:hover {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
 
 /*Nav*/
 .navbar { background-color: #FFD97D;}
 .navbar-brand { margin-left: 10px; font-weight: 700;}
 
 /*Sidebar*/
-/*실질적인 각 내비게이션 메뉴들의 색상 등을 정의*/
+/*�������� �� ������̼� �޴����� ���� ���� ����*/
 #sidebar .list-group-item  { background-color: #F7EDE2; color: #000000; border: none; white-space: nowrap;  }
-/*내비게이션 아래 끝까지 나열*/
+/*������̼� �Ʒ� ������ ����*/
 #sidebar .list-group  { background-color: #F7EDE2;  min-height: 100vh; }
-/*메뉴를 선택했을 때 부모 요소의 색상을 변경해줌*/
+/*�޴��� �������� �� �θ� ����� ������ ��������*/
 #sidebar .list-group .list-group-item[aria-expanded="true"]  { background-color: #F7EDE2; }
-/*메뉴를 선택했을 때 자식 요소의 색상을 변경해줌*/
+/*�޴��� �������� �� �ڽ� ����� ������ ��������*/
 #sidebar .list-group .list-group-item:not(.collapsed)  { background-color: #F7EDE2; }
 
-/*부가 설정*/
+/*�ΰ� ����*/
 #sidebar { overflow: hidden; z-index: 2; }
 @media (max-width: 768px) 
 {
     .span10 main {margin-left: 30px; margin-top: 40px; margin-right: 5px;}
-    /*사이드바 너비를 정해진 크기 설정*/
+    /*���̵�� �ʺ� ������ ũ�� ����*/
     #sidebar  { min-width: 35px; max-width: 40px; overflow-y: auto; overflow-x: visible;  transition: all 0.25s ease; transform: translateX(0px); position: fixed; }
-    /*사이드바의 서브 메뉴를 열었을 때 글자가 보이도록 함 */
+    /*���̵���� ���� �޴��� ������ �� ���ڰ� ���̵��� �� */
     #sidebar, #sidebar .list-group { min-width: 35px; overflow: visible; }
-    /*사이드바에서 서브 메뉴를 너비 설정*/
+    /*���̵�ٿ��� ���� �޴��� �ʺ� ����*/
     #sidebar .list-group .collapse.show, #sidebar .list-group .collapsing { position: relative; z-index: 1; width: 190px; top: 0; }
-    /* 아이콘을 정렬*/
+    /* �������� ����*/
     #sidebar .list-group > .list-group-item { text-align: center; padding: .75rem .5rem; }
     #sidebar::-webkit-scrollbar { width: 0px; }
 }
-/* mobile클래스 */
+/* mobileŬ���� */
 @media (max-width: 990px)
 {
     .mobile { display: none; }
@@ -82,6 +83,8 @@ main { margin-left: 250px; margin-top: 55px; margin-right: 100px;}
 .ad-main-table .post-column {text-align: center;}
 
 /*AdUserList.jsp*/
+#adUserList table {text-align: center;}
+#adUserList table th {font-weight: 700; background-color: #F7EDE2; }
 .ad-user-list-table th, tr {text-align: center;}
 .ad-user-list-table th .number-column { width: 60px; }
 .ad-user-list-table th .user-code-column { width: 120px;}
@@ -91,7 +94,7 @@ main { margin-left: 250px; margin-top: 55px; margin-right: 100px;}
 
 /*info-btn*/
 .info-btn {color: #fff;}
-.info-btn:hover {background-color: #EF6E6B; border-radius: 4px;}
+.info-btn:hover {background-color: #EF6E6B; border-radius: 4px; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
 
 /*AdUserInfo.jsp*/
 #adUserInfo table {text-align: center;}
@@ -160,32 +163,55 @@ main { margin-left: 250px; margin-top: 55px; margin-right: 100px;}
 #adPostRept table {text-align: center;}
 #adPostRept table th {font-weight: 700; background-color: #F7EDE2; }
 #adPostRept .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
-
+#adPostRept .send-content-btn {width: 100%; background-color: #F5CAC3;}
+#adPostRept .send-content-btn:hover {box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);}
+#adPostRept .approve-btn {width: 49%;}
+#adPostRept .deny-btn {width: 50%; background-color: #F7EDE2;}
+#adPostRept .return-btn {width: 100%; background-color: #F5CAC3;}
 
 /*adCmntReptList.jsp*/
 #adCmntReptList table {text-align: center;}
 #adCmntReptList table th {font-weight: 700; background-color: #F7EDE2; }
 #adCmntReptList .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adCmntReptList .wid-50-col {width: 50px;}
+#adCmntReptList .wid-150-col {width: 150px;}
+#adCmntReptList .content-title {text-align: left;}
+
+/*Ȱ��ȭ�� ��ư*/
+.unactivate-btn {width:100px; background-color: #F7EDE2; color: #000000;}
+.unactivate-btn:hover { background-color: #F7EDE2; color: #000000;}
+
+/*��Ȱ��ȭ ��ư*/
+.activate-btn {width:100px; background-color: #F5CAC3; color: #000000;}
+.activate-btn {background-color: #F5CAC3; color: #000000;}
 
 /*AdCmntRept.jsp*/
 #adCmntRept table {text-align: center;}
 #adCmntRept table th {font-weight: 700; background-color: #F7EDE2; }
 #adCmntRept .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adCmntRept .send-content-btn {width: 100%;}
+#adCmntRept .approve-btn {width: 49%; background-color: #F5CAC3;}
+#adCmntRept .deny-btn {width: 50%; background-color: #F7EDE2;}
+#adCmntRept .return-btn {width: 100%;}
 
 /*AdPostList.jsp*/
 #adPostList table {text-align: center;}
 #adPostList table th {font-weight: 700; background-color: #F7EDE2; }
 #adPostList .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adPostList .dropdown-selected {background-color: #F5CAC3; border: none;}
+#adPostList .paging-div {place-items: center; display: grid;}
 
 /*AdPostOpen.jsp*/
 #adPostOpen table {text-align: center;}
 #adPostOpen table th {font-weight: 700; background-color: #F7EDE2; }
 #adPostOpen .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adPostOpen tbody tr td { text-align: center; }
 
 /*AdPostPrivate.jsp*/
 #adPostPrivate table {text-align: center;}
-#adPostPrivate table th {font-weight: 700; background-color: #F7EDE2; }
+#adPostPrivate table th {font-weight: 700; background-color: #F7EDE2; text-align: center; }
 #adPostPrivate .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adPostPrivate tbody tr td { text-align: center; }
 
 /*AdPostInfo.jsp*/
 #adPostInfo table {text-align: center;}
@@ -212,20 +238,55 @@ main { margin-left: 250px; margin-top: 55px; margin-right: 100px;}
 #adCmntInfo table th {font-weight: 700; background-color: #F7EDE2; }
 #adCmntInfo .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
 
-/*adNotiList.jsp*/
+/*�������� div*/
+.notice-title {margin-top: 30px}
+
+/*AdNotiList.jsp*/
 #adNotiList .list-title { margin-top: 5px; font-weight: 700; font-size:16pt; color: #000;}
 #adNotiList table {text-align: center;}
 #adNotiList table th {font-weight: 700; background-color: #F7EDE2; }
 #adNotiList .paging { clear:both; margin-top: 20px; margin-bottom: 40px; text-align:center; }
+#adNotiList .write-btn {float: right;}
+#adNotiList .board-paging {place-items: center; display: grid;}
+#adNotiList #prev {color: #F5CAC3;}
+#adNotiList #next {color: #92B4EC;}
 
+/*AdNotiReg.jsp*/
+#adNotiReg table {text-align: center;}
+#adNotiReg table th {font-weight: 700; background-color: #F7EDE2; }
+#adNotiReg .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adNotiReg .table-title {padding-left:15px; width: 100%; height:35px;}
+#adNotiReg .table-content {padding-left: 12px; width: 100%}
+#adNotiReg .return-btn {background-color: #F5CAC3; float: right;}
+#adNotiReg .reg-btn{background-color: #92B4EC; float: right;}
 
-/*게시판 작성 포맷*/
+/*AdNotiCont.jsp*/
+#adNotiCont .list-title { margin-top: 5px; font-weight: 700; font-size:16pt; color: #000;}
+#adNotiCont table {text-align: center;}
+#adNotiCont table th {font-weight: 700; background-color: #F7EDE2; }
+#adNotiCont .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adNotiCont .table-content {width: 100%}
+#adNotiCont .edit-btn {background-color: skyblue; float: right;}
+#adNotiCont .delete-btn {background-color: #F5CAC3; float: right;}
+#adNotiCont .return-btn {background-color: lightgray; float: right;}
+
+/*AdNotiUpdate.jsp*/
+#adNotiUpdate .list-title { margin-top: 5px; font-weight: 700; font-size:16pt; color: #000;}
+#adNotiUpdate table {text-align: center;}
+#adNotiUpdate table th {font-weight: 700; background-color: #F7EDE2; }
+#adNotiUpdate .list-group-item {border-radius: 4px; margin-top: 8px; margin-bottom: 20px;}
+#adNotiUpdate .table-title {padding-left:15px; width: 500px; height:35px;}
+#adNotiUpdate .table-content {padding-left: 12px;}
+#adNotiUpdate .reg-btn {background-color: skyblue; float: right;}
+#adNotiUpdate .return-btn {background-color: #F5CAC3; float: right;}
+
+/*�Խ��� �ۼ� ����*/
 .table2 { border-collapse: collapse; border-top: 3px solid #036; border-bottom: 3px solid #036;  margin-left: 15px; }
 .table2 th { border: 1px clear; border-left: 50px; border-right: 0px; width: 25%; font-size: 18px; font-weight: bold; line-height: 150%; padding-top: 20px; }
 .table2 td { border: 1px clear; border-left: 50px; border-right: 0px; font-size: 12px; font-size: 12pt; line-height: 150%; text-align: left; padding-left:20px; padding-top: 20px; padding-bottom: 10px; }
 
 
-/* 모달(팝업같은거)이 중앙에 뜨도록  */
+/* ���(�˾�������)�� �߾ӿ� �ߵ���  */
 .modal
 {
     -webkit-transform: translate(0,-50%);

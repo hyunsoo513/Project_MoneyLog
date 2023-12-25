@@ -54,7 +54,7 @@
 							 <table class="table">
 							     <tr>
 							        <!-- 항목 -->
-							         <th>게시글번호</th>
+							         <th>no</th>
 							         <th>제목</th>
 							         <th>댓글</th>
 							         <th>등록일자</th>
@@ -71,7 +71,8 @@
 						 	<c:forEach var="list" items="${getPostList }" varStatus="loop">
 						 		<tr>
 									<td style="width: 110px; text-align: center;">
-										${fn:length(getPostList) - loop.index }
+										${list.rnum }
+										<%-- ${fn:length(getPostList) - loop.index } --%>
 									</td>
 						  			<td>
 						  				<a href="./moneypost.action?post_cd=${list.post_cd}">${list.post_title}</a>

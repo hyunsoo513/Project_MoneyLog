@@ -12,10 +12,6 @@ public interface IUserDAO
 	
 	public UserDTO login(@Param("user_id") String user_id, @Param("user_pw") String user_pw);
 	
-	// 아이디 찾기
-	//public UserDTO findId(@Param("user_name") String user_name, @Param("user_tel") String user_tel);
-	public UserDTO findId(String user_name, String user_tel);
-	
 	// 회원등록 메소드
 	public int add(UserDTO dto) throws SQLException;
 	
@@ -37,10 +33,8 @@ public interface IUserDAO
 	public Integer pigTotCount(UserDTO dto);	// 머니리뷰 기준 - 4달간 카운트 현황
 	public Integer pigMonthCount(UserDTO dto);	// 머니리뷰 기준 - 한달 카운트 현황
 	
-	// public Integer pigCount(UserDTO dto);
-	// public int pastRemain();
-	// public int dayInTot();
-	// public int dayOutTot();
+	// public Integer dayInTot(UserDTO dto);		// 당일 수입 총액
+	// public Integer dayOutTot(UserDTO dto);		// 당일 지출 총액
 
 	public ArrayList<UserDTO> monthInList(UserDTO dto);
 	public ArrayList<UserDTO> monthOutList(UserDTO dto);
@@ -50,6 +44,7 @@ public interface IUserDAO
 	public ArrayList<UserDTO> fstCateList();
 	public ArrayList<UserDTO> secCateList();
 	public int acntReg(UserDTO dto);
+	
 	// public ArrayList<UserDTO> fstCateListOne(UserDTO dto);
 	// public ArrayList<UserDTO> fstCateListTwo(UserDTO dto);
 	
@@ -93,15 +88,39 @@ public interface IUserDAO
     public int userBackUp(UserDTO dto);
     
     //-------------------------------------------------고객센터 추가
+    
     // 공지사항 리스트 확인
  	public ArrayList<UserDTO> userNotiList();
  	
+ 	// 공지사항 한 건 조회
+ 	public UserDTO userNotiSelect(UserDTO dto); 
+ 	
+ 	// 공지사항 조회수 증가
+ 	public Integer notiViewPlus(UserDTO dto);
+ 	
+	// 공지사항 수(페이징)
+	public int notiCount();
+	
+ 	
  	// 문의하기 리스트 확인
  	public ArrayList<UserDTO> userQnaList();
-    
  	
- 	// 이용자 문의하기 등록
+ 	// 이용자 문의글 등록
  	public int userQnaReg(UserDTO dto);
-	
+ 	
+ 	// 문의하기 등록글 한 건 조회
+ 	public UserDTO userQnaSelect(UserDTO dto); 
+ 	
+ 	// 이용자 문의글 수정
+ 	public int userQnaUpdate(UserDTO dto);
+ 	
+ 	// 이용자 문의글 삭제
+ 	public int userQnaDelete(UserDTO dto);
+ 	
+ 	
+	// ▼ 태형추가 ------------------------------------------------------
+ 	public ArrayList<UserDTO> calendarInTot(UserDTO dto); 
+ 	public ArrayList<UserDTO> calendarOutTot(UserDTO dto); 
+ 	public ArrayList<UserDTO> inOutData(UserDTO dto); 
 	
 }

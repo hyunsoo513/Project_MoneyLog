@@ -2,8 +2,7 @@ package com.test.mvc;
 
 public class UserDTO
 {
-	private String user_dstn_cd, user_name, user_id, user_pw, year, month;
-
+	private String user_dstn_cd, user_name, user_id, user_pw, year, month, day;
 	private String acnt_cd, acnt_date, cate_fst_cd, cate_fst_name, cate_sec_cd, cate_sec_name, inout_cd, inout_cont, acnt_dtl_cont, amnt; 
 	private String ban_date;
 	
@@ -14,12 +13,345 @@ public class UserDTO
 	
 	private String post_cd, post_title, count_cmnt, post_date, post_view
     , cmnt_cont, cmnt_date, qna_cd, qna_title, qna_date, qna_view, qna_cont
-    , leave_id, leave_name, leave_pw, leave_tel, leave_date;
+    , leave_id, leave_name, leave_pw, leave_tel, leave_date
+    
+    , noti_cd, noti_title, noti_cont, noti_view, noti_date, noti_pin
+    , ad_ansr_cd, ad_cd, ad_ansr_cont, ad_ansr_date;
 	
-	private String day;
+	private int prevNum, nextNum, start, end;
 	
+	// 태형 추가 (캘린더 총합)
+	private int tot;
+	
+	// 통계용 데이터
+	private int cate_fst_1, cate_fst_2, cate_fst_3
+	, cate_fst_4, cate_fst_5, cate_fst_6
+	, cate_fst_7, cate_fst_8, cate_fst_9
+	, cate_fst_10, cate_fst_11, cate_fst_12
+	, cate_fst_13, cate_fst_14, cate_fst_15
+	, cate_fst_16, cate_fst_17, cate_fst_18, cate_fst_19;
+	
+	private String yearMonthDay;
+	
+	
+	
+	
+	public String getYearMonthDay()
+	{
+		return yearMonthDay;
+	}
 
-	// day 추가
+	public void setYearMonthDay(String yearMonthDay)
+	{
+		this.yearMonthDay = yearMonthDay;
+	}
+
+	public int getCate_fst_1()
+	{
+		return cate_fst_1;
+	}
+
+	public void setCate_fst_1(int cate_fst_1)
+	{
+		this.cate_fst_1 = cate_fst_1;
+	}
+
+	public int getCate_fst_2()
+	{
+		return cate_fst_2;
+	}
+
+	public void setCate_fst_2(int cate_fst_2)
+	{
+		this.cate_fst_2 = cate_fst_2;
+	}
+
+	public int getCate_fst_3()
+	{
+		return cate_fst_3;
+	}
+
+	public void setCate_fst_3(int cate_fst_3)
+	{
+		this.cate_fst_3 = cate_fst_3;
+	}
+
+	public int getCate_fst_4()
+	{
+		return cate_fst_4;
+	}
+
+	public void setCate_fst_4(int cate_fst_4)
+	{
+		this.cate_fst_4 = cate_fst_4;
+	}
+
+	public int getCate_fst_5()
+	{
+		return cate_fst_5;
+	}
+
+	public void setCate_fst_5(int cate_fst_5)
+	{
+		this.cate_fst_5 = cate_fst_5;
+	}
+
+	public int getCate_fst_6()
+	{
+		return cate_fst_6;
+	}
+
+	public void setCate_fst_6(int cate_fst_6)
+	{
+		this.cate_fst_6 = cate_fst_6;
+	}
+
+	public int getCate_fst_7()
+	{
+		return cate_fst_7;
+	}
+
+	public void setCate_fst_7(int cate_fst_7)
+	{
+		this.cate_fst_7 = cate_fst_7;
+	}
+
+	public int getCate_fst_8()
+	{
+		return cate_fst_8;
+	}
+
+	public void setCate_fst_8(int cate_fst_8)
+	{
+		this.cate_fst_8 = cate_fst_8;
+	}
+
+	public int getCate_fst_9()
+	{
+		return cate_fst_9;
+	}
+
+	public void setCate_fst_9(int cate_fst_9)
+	{
+		this.cate_fst_9 = cate_fst_9;
+	}
+
+	public int getCate_fst_10()
+	{
+		return cate_fst_10;
+	}
+
+	public void setCate_fst_10(int cate_fst_10)
+	{
+		this.cate_fst_10 = cate_fst_10;
+	}
+
+	public int getCate_fst_11()
+	{
+		return cate_fst_11;
+	}
+
+	public void setCate_fst_11(int cate_fst_11)
+	{
+		this.cate_fst_11 = cate_fst_11;
+	}
+
+	public int getCate_fst_12()
+	{
+		return cate_fst_12;
+	}
+
+	public void setCate_fst_12(int cate_fst_12)
+	{
+		this.cate_fst_12 = cate_fst_12;
+	}
+
+	public int getCate_fst_13()
+	{
+		return cate_fst_13;
+	}
+
+	public void setCate_fst_13(int cate_fst_13)
+	{
+		this.cate_fst_13 = cate_fst_13;
+	}
+
+	public int getCate_fst_14()
+	{
+		return cate_fst_14;
+	}
+
+	public void setCate_fst_14(int cate_fst_14)
+	{
+		this.cate_fst_14 = cate_fst_14;
+	}
+
+	public int getCate_fst_15()
+	{
+		return cate_fst_15;
+	}
+
+	public void setCate_fst_15(int cate_fst_15)
+	{
+		this.cate_fst_15 = cate_fst_15;
+	}
+
+	public int getCate_fst_16()
+	{
+		return cate_fst_16;
+	}
+
+	public void setCate_fst_16(int cate_fst_16)
+	{
+		this.cate_fst_16 = cate_fst_16;
+	}
+
+	public int getCate_fst_17()
+	{
+		return cate_fst_17;
+	}
+
+	public void setCate_fst_17(int cate_fst_17)
+	{
+		this.cate_fst_17 = cate_fst_17;
+	}
+
+	public int getCate_fst_18()
+	{
+		return cate_fst_18;
+	}
+
+	public void setCate_fst_18(int cate_fst_18)
+	{
+		this.cate_fst_18 = cate_fst_18;
+	}
+
+	public int getCate_fst_19()
+	{
+		return cate_fst_19;
+	}
+
+	public void setCate_fst_19(int cate_fst_19)
+	{
+		this.cate_fst_19 = cate_fst_19;
+	}
+
+	public int getTot()
+	{
+		return tot;
+	}
+
+	public void setTot(int tot)
+	{
+		this.tot = tot;
+	}
+
+	// getter / setter 구성
+	public String getNoti_cd()
+	{
+		return noti_cd;
+	}
+
+	public void setNoti_cd(String noti_cd)
+	{
+		this.noti_cd = noti_cd;
+	}
+
+	public String getNoti_title()
+	{
+		return noti_title;
+	}
+
+	public void setNoti_title(String noti_title)
+	{
+		this.noti_title = noti_title;
+	}
+
+	public String getNoti_cont()
+	{
+		return noti_cont;
+	}
+
+	public void setNoti_cont(String noti_cont)
+	{
+		this.noti_cont = noti_cont;
+	}
+
+	public String getNoti_view()
+	{
+		return noti_view;
+	}
+
+	public void setNoti_view(String noti_view)
+	{
+		this.noti_view = noti_view;
+	}
+
+	public String getNoti_date()
+	{
+		return noti_date;
+	}
+
+	public void setNoti_date(String noti_date)
+	{
+		this.noti_date = noti_date;
+	}
+
+	public String getNoti_pin()
+	{
+		return noti_pin;
+	}
+
+	public void setNoti_pin(String noti_pin)
+	{
+		this.noti_pin = noti_pin;
+	}
+
+	public String getAd_ansr_cd()
+	{
+		return ad_ansr_cd;
+	}
+
+	public void setAd_ansr_cd(String ad_ansr_cd)
+	{
+		this.ad_ansr_cd = ad_ansr_cd;
+	}
+
+	public String getAd_cd()
+	{
+		return ad_cd;
+	}
+
+	public void setAd_cd(String ad_cd)
+	{
+		this.ad_cd = ad_cd;
+	}
+
+	public String getAd_ansr_cont()
+	{
+		return ad_ansr_cont;
+	}
+
+	public void setAd_ansr_cont(String ad_ansr_cont)
+	{
+		this.ad_ansr_cont = ad_ansr_cont;
+	}
+
+	public String getAd_ansr_date()
+	{
+		return ad_ansr_date;
+	}
+
+	public void setAd_ansr_date(String ad_ansr_date)
+	{
+		this.ad_ansr_date = ad_ansr_date;
+	}
+
+	public String getUser_dstn_cd()
+	{
+		return user_dstn_cd;
+	}
+
 	public String getDay()
 	{
 		return day;
@@ -30,12 +362,6 @@ public class UserDTO
 		this.day = day;
 	}
 
-	
-	// getter / setter 구성
-	public String getUser_dstn_cd()
-	{
-		return user_dstn_cd;
-	}
 	public String getQna_cont()
 	{
 		return qna_cont;
@@ -630,5 +956,47 @@ public class UserDTO
 	{
 		this.leave_date = leave_date;
 	}
+
+	public int getPrevNum()
+	{
+		return prevNum;
+	}
+
+	public void setPrevNum(int prevNum)
+	{
+		this.prevNum = prevNum;
+	}
+
+	public int getNextNum()
+	{
+		return nextNum;
+	}
+
+	public void setNextNum(int nextNum)
+	{
+		this.nextNum = nextNum;
+	}
+
+	public int getStart()
+	{
+		return start;
+	}
+
+	public void setStart(int start)
+	{
+		this.start = start;
+	}
+
+	public int getEnd()
+	{
+		return end;
+	}
+
+	public void setEnd(int end)
+	{
+		this.end = end;
+	}
+	
+	
 	
 }

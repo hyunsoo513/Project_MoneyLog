@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -12,14 +13,11 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/admin.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="<%=cp%>/js/jquery-ui.js"></script>
 <script type="text/javascript">
 
-	function notiDelete()
-	{
-		confirm("삭제가 완료되었습니다.");
-		window.location.href = "./AdNotiList.jsp"; //★ 링크 수정 ★ 
-	}
-
+	
 </script>
 
 </head>
@@ -28,10 +26,8 @@
 
 <div class="wrap">
     <header>
-        <header>
-            <!-- ○ 상단 네비게이션 include -->
-	        <jsp:include page="./AdNavCs.jsp"></jsp:include>
-        </header>
+    	<!-- ○ 상단 네비게이션 include -->
+	   	<jsp:include page="./AdNavCs.jsp"></jsp:include>
     </header>
 
     <div class="container-fluid">
@@ -41,10 +37,11 @@
                 <jsp:include page="./AdMenuCs.jsp"></jsp:include>
             </div>
             <div class="span10">
-                <main id="adNotiList">
+                <main id="adNotiCont">
                     <section>
                         <div class="row">
-                            <div class="col-12" id="List_title" style="margin-top: 30px;" >
+                            <!-- <div class="col-12 notice-title" id="List_title"> -->
+                            <div class="col-12 notice-title">
                                 <div class="list-title">
                                     공지사항(관리자)
                                 </div>
@@ -58,27 +55,34 @@
                                     <tr>
                                         <th>제목</th>
                                         <td>
-                                            머니로그 업데이트 관련 공지합니다.
+                                            ${adNotiView.noti_title }
                                         </td>
                                         <th>작성일</th>
                                         <td>
-                                            2022.05.17
+                                            ${adNotiView.noti_date }
                                         <td>
                                     </tr>
                                     <tr>
                                         <th>공지유형</th>
                                         <td>
-                                            <label for="pin"><input type="checkbox" id="pin" name="pin" checked> 상단고정</label>
+                                        	 <c:choose>
+                                        	 	 <c:when test="${adNotiView.noti_pin eq 'N'}">
+                                        	 	 	<label for="pin"><input type="checkbox" id="pin1" name="pin" disabled> 상단고정</label>
+                                        	 	 </c:when>
+                                        	 	 <c:otherwise>
+                                        	 	 	<label for="pin"><input type="checkbox" id="pin2" name="pin" checked="checked" disabled> 상단고정</label>
+                                        	 	 </c:otherwise>
+                                        	 </c:choose>
                                         </td>
                                         <th>작성자</th>
                                         <td>
-                                            admin1
+                                            ${adNotiView.ad_id }
                                         <td>	 
                                     </tr>
                                     <tr>
                                         <th>내용</th>
                                         <td colspan="4">
-                                            <textarea name="content" rows="10" cols="60" readonly="readonly" style="width: 100%;">머니로그를 이용해주신 이용자 여러분, 안녕하세요.</textarea>
+                                            <textarea class="table-content" name="content" rows="10" cols="60" readonly="readonly">${adNotiView.noti_cont }</textarea>
                                         </td>   
                                     </tr>
                                 </table>
@@ -88,14 +92,21 @@
                     <section>
                         <div class="row">
                             <div class="col-12" style="margin-top: 20px;">
-                                <button type="submit" class="btn btn-primary" style="background-color: skyblue; float: right;"
-                                onclick="javascript:location.href='<%=cp%>/AdNotiUpdate.jsp'">수정하기</button>
+								<%--                             
+                                <form id="UpdateForm" action="./adnotiupdateform.action" >
+	                                <button type="button" id="updateBtn" class="btn btn-primary edit-btn">수정하기</button>
+	                                <input type="hidden" name="noti_cd" id="noti_cd" value="${adNotiView.noti_cd }">
+                                </form>
+                                --%>
                                 
-                                <button type="submit" class="btn btn-secondary" style="background-color: #F5CAC3; float: right;" 
+                                <button type="submit" class="btn btn-primary edit-btn"
+                                onclick="javascript:location.href='<%=cp%>/adnotiupdateform.action?noti_cd=${adNotiView.noti_cd}'">수정하기</button>
+                                
+                                <button type="submit" class="btn btn-secondary delete-btn"
                                 data-toggle="modal" data-target="#modal">삭제하기</button>
                                 
-                                <button type="submit" class="btn btn-third" style="background-color: lightgray; float: right;"
-                                onclick="javascript:location.href='<%=cp%>/AdNotiList.jsp'">돌아가기</button>
+                                <button type="submit" class="btn btn-third return-btn"
+                                onclick="javascript:location.href='<%=cp%>/adnotilist.action'">돌아가기</button>
                             </div>
                         </div>
                     </section>
@@ -125,8 +136,9 @@
                     <img src="./img3/warning.png" width="50%;">
                     
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소하기</button>
-                        <button type="button" class="btn btn-primary" onclick="notiDelete()">삭제하기</button>
+                        <button type="button" class="btn btn-secondary" style="background-color: blue;" data-dismiss="modal">취소하기</button>
+                        <button type="button" class="btn btn-primary" 
+                        onclick="javascript:location.href='<%=cp%>/notidelete.action?noti_cd=${adNotiView.noti_cd}'">삭제하기</button>
                     </div>
                 </form>
             </div>

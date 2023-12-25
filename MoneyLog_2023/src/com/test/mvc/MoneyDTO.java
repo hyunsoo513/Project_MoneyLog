@@ -11,6 +11,7 @@ public class MoneyDTO
 	int post_cd;
 	int post_count;
 	String year, month;
+	String sysdate;
 	
 	// 머니리뷰 소비/지출 내역
 	String inout_cont, acnt_date, cate_fst_name, cate_sec_name, acnt_dtl_cont;
@@ -40,13 +41,206 @@ public class MoneyDTO
 	int start, end;
 	int count_cmnt;
 	
-	// 머니리뷰 게시글 신고
-	String rept_cate_cd, post_rept_dtl_cont, post_rept_cd;
+	// 머니리뷰 게시글, 댓글 신고
+	String rept_cate_cd, post_rept_dtl_cont, post_rept_cd, cmnt_rept_dtl_cont, cmnt_rept_cd;
+	
+	// 신고 날짜
+	String post_rept_date;
+	String cmnt_rept_date;
+	
+	// 게시글, 댓글 공개여부 체크
+	String post_check;
+	String cmnt_check;
+	
+	
+	// 이용자 아이디
+	String user_id;
+	
+	// 머니리뷰 신고자 id
+	String rept_user_id;
+	
+	// 관리자 id
+	String ad_id;
+	
+	// 승인여부
+	String post_cnfm;
+	String cmnt_cnfm;
+	
+	// 관리자 신고처리일자
+	String post_cnfm_date;
+	String cmnt_cnfm_date;
+	
+	// 신고 세부사유
+	String post_rept_detail;
+	String cmnt_rept_detail;
+	
+	// 전체/공개/비공개
+	int postListCheck;
+	int cmntListCheck;
+
+	
+	// 댓글 작성일자
+	String cmnt_date;
 	
 	
 	
 	
 	
+	
+	
+	
+	public String getSysdate()
+	{
+		return sysdate;
+	}
+	public void setSysdate(String sysdate)
+	{
+		this.sysdate = sysdate;
+	}
+	public String getCmnt_rept_detail()
+	{
+		return cmnt_rept_detail;
+	}
+	public void setCmnt_rept_detail(String cmnt_rept_detail)
+	{
+		this.cmnt_rept_detail = cmnt_rept_detail;
+	}
+	public String getCmnt_rept_dtl_cont()
+	{
+		return cmnt_rept_dtl_cont;
+	}
+	public void setCmnt_rept_dtl_cont(String cmnt_rept_dtl_cont)
+	{
+		this.cmnt_rept_dtl_cont = cmnt_rept_dtl_cont;
+	}
+	public String getCmnt_rept_cd()
+	{
+		return cmnt_rept_cd;
+	}
+	public void setCmnt_rept_cd(String cmnt_rept_cd)
+	{
+		this.cmnt_rept_cd = cmnt_rept_cd;
+	}
+	public String getCmnt_rept_date()
+	{
+		return cmnt_rept_date;
+	}
+	public void setCmnt_rept_date(String cmnt_rept_date)
+	{
+		this.cmnt_rept_date = cmnt_rept_date;
+	}
+	public String getCmnt_cnfm()
+	{
+		return cmnt_cnfm;
+	}
+	public void setCmnt_cnfm(String cmnt_cnfm)
+	{
+		this.cmnt_cnfm = cmnt_cnfm;
+	}
+	public String getCmnt_cnfm_date()
+	{
+		return cmnt_cnfm_date;
+	}
+	public void setCmnt_cnfm_date(String cmnt_cnfm_date)
+	{
+		this.cmnt_cnfm_date = cmnt_cnfm_date;
+	}
+	public int getCmntListCheck()
+	{
+		return cmntListCheck;
+	}
+	public void setCmntListCheck(int cmntListCheck)
+	{
+		this.cmntListCheck = cmntListCheck;
+	}
+	public String getCmnt_check()
+	{
+		return cmnt_check;
+	}
+	public void setCmnt_check(String cmnt_check)
+	{
+		this.cmnt_check = cmnt_check;
+	}
+	public String getCmnt_date()
+	{
+		return cmnt_date;
+	}
+	public void setCmnt_date(String cmnt_date)
+	{
+		this.cmnt_date = cmnt_date;
+	}
+	public int getPostListCheck()
+	{
+		return postListCheck;
+	}
+	public void setPostListCheck(int postListCheck)
+	{
+		this.postListCheck = postListCheck;
+	}
+	public String getPost_cnfm()
+	{
+		return post_cnfm;
+	}
+	public void setPost_cnfm(String post_cnfm)
+	{
+		this.post_cnfm = post_cnfm;
+	}
+	public String getAd_id()
+	{
+		return ad_id;
+	}
+	public void setAd_id(String ad_id)
+	{
+		this.ad_id = ad_id;
+	}
+	public String getPost_cnfm_date()
+	{
+		return post_cnfm_date;
+	}
+	public void setPost_cnfm_date(String post_cnfm_date)
+	{
+		this.post_cnfm_date = post_cnfm_date;
+	}
+	public String getPost_rept_detail()
+	{
+		return post_rept_detail;
+	}
+	public void setPost_rept_detail(String post_rept_detail)
+	{
+		this.post_rept_detail = post_rept_detail;
+	}
+	public String getPost_rept_date()
+	{
+		return post_rept_date;
+	}
+	public void setPost_rept_date(String post_rept_date)
+	{
+		this.post_rept_date = post_rept_date;
+	}
+	public String getRept_user_id()
+	{
+		return rept_user_id;
+	}
+	public void setRept_user_id(String rept_user_id)
+	{
+		this.rept_user_id = rept_user_id;
+	}
+	public String getUser_id()
+	{
+		return user_id;
+	}
+	public void setUser_id(String user_id)
+	{
+		this.user_id = user_id;
+	}
+	public String getPost_check()
+	{
+		return post_check;
+	}
+	public void setPost_check(String post_check)
+	{
+		this.post_check = post_check;
+	}
 	public String getRept_cate_cd()
 	{
 		return rept_cate_cd;

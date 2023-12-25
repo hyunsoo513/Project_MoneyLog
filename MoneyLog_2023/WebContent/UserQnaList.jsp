@@ -13,9 +13,12 @@
 <meta charset="utf-8">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" type="text/css" href="<%=cp %>/css/board.css">
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+
 <script type="text/javascript">
     /*
 	function sendIt()
@@ -29,8 +32,10 @@
 </script>
 </head>
 <body>
-	<!-- ○ 상단 네비게이션 include -->
-	<jsp:include page="./UserNavCs.jsp"></jsp:include>
+	<header>
+		<!-- ○ 상단 네비게이션 include -->
+		<jsp:include page="./UserNavCs.jsp"></jsp:include>
+	</header>
 
 	<!-- 여백이 없는 반응형 웹을 만들때 container-fluid 사용 -->
     <div class="container-fluid">
@@ -85,11 +90,10 @@
 			    	 </thead>
 			         <tbody>
 			            
-
 		             
 						<c:if test="${empty userQnaList}">
 						<tr>
-							<td colspan="6" style="text-align: center;">등록된 공지사항이 없습니다.</td>
+							<td colspan="6" style="text-align: center;">등록된 문의글이 없습니다.</td>
 						</tr>
 						</c:if>
 						
@@ -98,7 +102,7 @@
 		                <c:forEach var="userQna" items="${userQnaList }" varStatus="status">
 		                <tr>
 			                <td scope="row" class="mobile" style="text-align:center;">${fn:length(userQnaList) - status.index }</td>
-			                <td><a href="./boardView.html" style="color: #000000;">${userQna.qna_title }</a></td>
+			                <td><a href="./userqnaselect.action?qna_cd=${userQna.qna_cd }" style="color: #000000;">${userQna.qna_title }</a></td>
 			                <td class="mobile" style="text-align:center;">${userQna.user_name }</td>
 			                <td class="mobile" style="text-align:center;">${userQna.ad_ansr_cd}</td>
 			                <td class="mobile" style="text-align:center;">
@@ -134,17 +138,9 @@
 </div>				
 
 	
-	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery-3.2.1.min.js"></script>
-	<!-- Popper 자바스크립트 추가하기 -->
 	<script src="./js/popper.min.js"></script>
-	<!-- 부트스트랩 자바스크립트 추가하기 -->
 	<script src="./js/bootstrap.min.js"></script>
-	<!-- MDB 라이브러리 추가하기 <== chart!!!! **** -->
-	<script src="./js/mdb.min.js"></script>
-
-
-
 
 
 </body>

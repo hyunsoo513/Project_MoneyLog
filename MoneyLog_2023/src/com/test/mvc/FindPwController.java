@@ -1,5 +1,7 @@
 package com.test.mvc;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -24,9 +26,11 @@ public class FindPwController implements Controller
 		String user_id = request.getParameter("user_id");
 		String user_tel = request.getParameter("user_tel");
 		
-		String findPwd = dao.findPwd(user_name, user_id, user_tel);
+		ArrayList<UserDTO> checkPw = new ArrayList<UserDTO>();
 		
-		mav.addObject("findPwd", findPwd);
+		checkPw = dao.findPw(user_name, user_id, user_tel);
+		
+		mav.addObject("checkPw", checkPw);
 		
 		mav.setViewName("UserPwCertifiedOk.jsp");
 		

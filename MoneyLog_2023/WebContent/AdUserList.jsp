@@ -1,4 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -8,19 +11,17 @@
 <head>
 <title>회원목록</title>
 
-<script type="text/javascript">
-	function newPage()
-	{
-        window.location.href = "./adUserInfo.jsp"
-	}
-</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/admin.css">
-</head>
+<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+	
+ 
+</script>
 
+</head>
 <body>
     <div class="wrap">
         <!-- ○ 상단 네비게이션 include -->
@@ -82,22 +83,19 @@
             </div>
             
             <div class="span10">
-                <main>
+                <main id="adUserList">
                     <section>
                         <div class="row">
                 
                             <!-- 회원 리스트 -->
                             <div class="col-md-12">
-                
                                 <div class="list-group">
-                                    <br><br>
-                                    <h4>회원 목록<small> 회원들을 관리하세요</small></h4>
-        
+                                    <br>
+                                    <h4>회원 목록<small> 머니로그를 이용중인 회원입니다.</small></h4>
                                     <div class="list-group-item">
                                         <div class="list-group">
                                             <table class="table ad-user-list-table">
-                                                <tbody>
-                                                
+                                             	<tbody>
                                                     <!-- class="mobile" 는 화면이 990픽셀 이하로 작아지면 안보이게 처리 (모바일용)-->
                                                     <!-- 회원 목록 (화면 작아지면 번호, 이름, 상세정보만 뜨도록)  -->
                                                     <tr>
@@ -108,17 +106,7 @@
                                                         <th class="mobile user-date-column" >가입일자</th>
                                                         <th class="user-info-column" >상세정보</th>
                                                     </tr>
-                                                    
-                                                    <tr>
-                                                        <td class="mobile">3</td>
-                                                        <td class="mobile">001001</td>
-                                                        <td>이윤태</td>
-                                                        <td>test@test.com</td>
-                                                        <td class="mobile">2022-06-05</td>
-                                                        <td>
-                                                            <button type="button" class="btn btn-success" onclick="location.href='AdUserInfo.jsp'">보기</button>
-                                                        </td>
-                                                    </tr>
+                                                    <!-- 
                                                     <tr>
                                                         <td class="mobile">4</td>
                                                         <td class="mobile">001002</td>
@@ -129,27 +117,35 @@
                                                             <button type="button" class="btn btn-success" onclick="location.href='AdUserInfo.jsp'">보기</button>
                                                         </td>
                                                     </tr>
+                                                    -->
+                                                    
+                                                    <c:if test="${empty adUserList }">
+													<tr>
+														<td colspan="6" style="text-align: center;">머니리뷰에 가입한 회원이 없습니다.</td>
+													</tr>
+													</c:if>
+													
+													<c:if test="${not empty adUserList }">
+									                <c:forEach var="adUser" items="${adUserList }" varStatus="status">
                                                     <tr>
-                                                        <td class="mobile">5</td>
-                                                        <td class="mobile">001011</td>
-                                                        <td>이윤</td>
-                                                        <td>testrref@test.com</td>
-                                                        <td class="mobile">2022-06-05</td>
+                                                        <td class="mobile">${fn:length(adUserList) - status.index }</td>
+                                                        <td class="mobile">${adUser.user_dstn_cd }</td>
+                                                        <td>${adUser.user_name }</td>
+                                                        <td>${adUser.user_id }</td>     
+														<td class="mobile" style="text-align:center;">
+										                	<fmt:parseDate value="${adUser.user_date}" var="user_date" pattern="yyyy-mm-dd" />
+															<fmt:formatDate value="${user_date}" pattern="yyyy-mm-dd" />
+										                </td>
+										                
                                                         <td>
-                                                            <button type="button" class="btn btn-success" onclick="location.href='AdUserInfo.jsp'">보기</button>
+                                                            <button type="button" class="btn btn-success" name="user_dstn_cd"
+                                                            onclick="location.href='./aduserinfo.action?user_dstn_cd=${adUser.user_dstn_cd }'">보기</button>
                                                         </td>
                                                     </tr>
-                                                    <tr>
-                                                        <td class="mobile">6</td>
-                                                        <td class="mobile">001007</td>
-                                                        <td>이태태</td>
-                                                        <td>testt@test.com</td>
-                                                        <td class="mobile">2022-06-05</td>
-                                                        <td>
-                                                            <button type="button" class="btn btn-success" onclick="location.href='AdUserInfo.jsp'">보기</button>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
+                                                    </c:forEach>
+													</c:if>
+													 
+												</tbody>
                                             </table>
                                         </div>
                                     </div>

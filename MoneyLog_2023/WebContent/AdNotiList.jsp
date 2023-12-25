@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String cp = request.getContextPath();
@@ -12,21 +14,13 @@
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="stylesheet" href="./css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/admin.css">
-<script type="text/javascript">
-
-	function sendIt()
-	{
-	}
-</script>
 </head>
 <body>
 
 <div class="wrap">
     <header>
-        <header>
-            <!-- ○ 상단 네비게이션 include -->
-	        <jsp:include page="./AdNavCs.jsp"></jsp:include>
-        </header>
+		<!-- ○ 상단 네비게이션 include -->
+		<jsp:include page="./AdNavCs.jsp"></jsp:include>
     </header>
 
     <div class="container-fluid">
@@ -39,7 +33,7 @@
                 <main id="adNotiList">
                     <section>
                         <div class="row">
-                            <div class="col-12" style="margin-top: 30px;" >
+                            <div class="col-12 notice-title">
                                 <div class="list-title">
                                         공지사항
                                 </div>
@@ -49,89 +43,48 @@
                         <div class="row">
                             <div class="col-12">
                                 <table class="table table-striped board-table">
-                                    <tr>
-                                        <!-- 항목 -->
-                                        <th>번호</th>
-                                        <th>제목</th>
-                                        <th>작성자</th>
-                                        <th>등록일자</th>
-                                        <th>조회수</th>
-                                    </tr>	
-                                    <tr>
-                                        <td>38</td>
-                                        <td><a href="AdNotiCont.jsp">서비스 이용약관 변경 안내</a></td>
-                                        <td>admin1</td>
-                                        <td>2022.06.06</td>
-                                        <td>402</td>
-                                    </tr>
-                                    <tr>
-                                        <td>37</td>
-                                        <td><a href="AdNotiCont.jsp">버전3 업데이트 내용 안내</a></td>
-                                        <td>admin1</td>
-                                        <td>2022.06.01</td>
-                                        <td>186</td>
-                                    </tr>
-                                    <tr>
-                                        <td>36</td>
-                                        <td>버전3 업데이트 안내</td>
-                                        <td>admin1</td>
-                                        <td>2022.06.01</td>
-                                        <td>412</td>
-                                    </tr>
-                                    <tr>
-                                        <td>35</td>
-                                        <td>서비스 변경 안내</td>
-                                        <td>admin2</td>
-                                        <td>2022.05.12</td>
-                                        <td>106</td>
-                                    </tr>
-                                    <tr>
-                                        <td>34</td>
-                                        <td>게시물 업데이트 안내</td>
-                                        <td>머니로그 관리자</td>
-                                        <td>2022.05.08</td>
-                                        <td>397</td>
-                                    </tr>
-                                    <tr>
-                                        <td>33</td>
-                                        <td>머니로그 보안 작업에 따른 변경사항 안내</td>
-                                        <td>머니로그 관리자</td>
-                                        <td>2022.05.08</td>
-                                        <td>397</td>
-                                    </tr>
-                                    <tr>
-                                        <td>32</td>
-                                        <td>서비스 내용 안내</td>
-                                        <td>admin2</td>
-                                        <td>2022.05.01</td>
-                                        <td>824</td>
-                                    </tr>
-                                    <tr>
-                                        <td>31</td>
-                                        <td>서비스 이용약관 변경 안내</td>
-                                        <td>admin2</td>
-                                        <td>2022.04.21</td>
-                                        <td>642</td>
-                                    </tr>
-                                    <tr>
-                                        <td>30</td>
-                                        <td>서비스 이용약관 변경 안내</td>
-                                        <td>admin2</td>
-                                        <td>2022.04.18</td>
-                                        <td>486</td>
-                                    </tr>
+	                                <tr>
+	                                     <!-- 항목 -->
+	                                     <th>번호</th>
+	                                     <th>제목</th>
+	                                     <th>작성자</th>
+	                                     <th>등록일자</th>
+	                                     <th>조회수</th>
+	                                </tr>	
+
+                                    <c:if test="${empty adNotiList}">
+									<tr>
+										<td colspan="5" style="text-align: center;">등록된 공지사항이 없습니다.</td>
+									</tr>
+									</c:if>
+									
+									<c:if test="${not empty adNotiList}">
+		                			<c:forEach var="adNoti" items="${adNotiList }" varStatus="status">
+		                			<tr>
+			                			<td scope="row" class="mobile" style="text-align:center;">${adNoti.rownum }</td>
+			                			<td><a href="./adnoticont.action?noti_cd=${adNoti.noti_cd }" style="color: #000000;">${adNoti.noti_title }</a></td>
+			                			<td class="mobile" style="text-align:center;">${adNoti.ad_id }</td>
+			                			<td class="mobile" style="text-align:center;">
+			                				<fmt:parseDate value="${adNoti.noti_date }" var="noti_date" pattern="yyyy-mm-dd" />
+											<fmt:formatDate value="${noti_date}" pattern="yyyy-mm-dd" />
+			                			</td>
+			                			<td class="mobile" style="text-align:center;">${adNoti.noti_view }</td>
+									</tr>
+									</c:forEach>
+									</c:if>
+
                                 </table>
                             </div>
                         </div>
                         <div class="row">	
                             <div class="col-12">
-                                <button type="button" class="btn btn-success" style="float: right;"onclick="javascript:location.href='<%=cp%>/AdNotiReg.jsp'" >작성하기</button>
+                                <button type="button" class="btn btn-success write-btn" onclick="location.href='./adnotiregform.action'">작성하기</button>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12" style="place-items: center; display: grid;">
+                            <div class="col-12 board-paging">
                                 <div class="paging">
-                                    <p> 1 <span style="color: #F5CAC3;">Prev</span> 21 22 23 24 25 26 27 28 29 30 <span style="color: #92B4EC;">Next</span> 54</p>		
+                                    <p>${strList }${start }${end }</p>		
                                 </div>	
                             </div>
                         </div>
