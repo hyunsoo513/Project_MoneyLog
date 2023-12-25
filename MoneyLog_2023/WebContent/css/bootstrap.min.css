@@ -6866,7 +6866,8 @@ supports ((position:-webkit-sticky ) or (position:sticky )){ .
 }
 
 .m-2 {
-	margin: .5rem !important
+	margin: .5rem !important;
+	font-size: 1.5rem;
 }
 
 .mt-2, .my-2 {
