@@ -81,7 +81,7 @@ h5, h6{font-weight: 500;}
 #login-main { text-align: center; color: #FF9B85; margin: 30px; font-size: 50px; font-weight: 900; }
 #login-form { width: 300px; background-color: #FFD97D; color: #9b9b9b; border-radius: 5px; margin-left: auto; margin-right: auto; padding: 20px; place-items: center; display: grid; }
 .text-field  { width: 100%; font-size: 14px; margin-bottom: 10px; padding: 10px; border-radius: 5px; }
-#login-btn { width: 260px; margin-bottom: 10px; padding: 10px; border-radius: 5px; background-color: #FF9B85; border: none; }
+#login-btn { width: 260px; margin-top: 10px; padding: 10px; border-radius: 5px; background-color: #FF9B85; border: none; }
 #userLogin .login-banner { padding-top: 40px; place-items: center; display: grid; }
 #userLogin .lgoin-banner>div {text-align: center;}
 #userLogin #login-links {margin-top: 10px;}

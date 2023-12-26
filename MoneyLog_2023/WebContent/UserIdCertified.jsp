@@ -70,7 +70,7 @@
 	
 	        <div class="row sign-up-form id-find">
 				<div class="sign-up-process col-12">
-	                <form action="/MoneyLog/findid.action" method="post" id="idForm">
+	                <form action="/findid.action" method="post" id="idForm">
 	                    <div class="row form-group">
 							<div class="col-8">
 								<label>이름</label>

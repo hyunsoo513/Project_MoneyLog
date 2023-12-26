@@ -57,21 +57,28 @@
 					<form action="login.action" method="POST" id="loginForm" name="loginForm"> 
 						<input type="text" id="user_id" name="user_id" class="text-field form-control" placeholder="아이디를 입력해주세요" value="${cookie.id.value}" required="required">
 	                    <input type="password" id="user_pw" name="user_pw" class="text-field form-control" placeholder="비밀번호를 입력해주세요" required="required"/>
-						<button type="submit" class="btn btn-primary" id="login-btn" >로그인</button>
-						
 						<div>
 							<label><input type="checkbox" name="rememberId" ${empty cookie.id.value ? "" : "checked"}> 아이디 저장</label>
 						</div>
+						<button type="submit" class="btn btn-primary" id="login-btn" >로그인</button>
+						
 	                    <div id="login-links">
-	                        <a href="/MoneyLog/searchid.action" >아이디 찾기</a> 
+	                        <a href="searchid.action" >아이디 찾기</a> 
 	                        <span style="margin-left: 32px; margin-right: 32px;">|</span>
-	                        <a href="/MoneyLog/searchpw.action">비밀번호 찾기</a>
+	                        <a href="searchpw.action">비밀번호 찾기</a>
 	                    </div>
 	                    <div>
 	                       <span id="err"></span>
 	                    </div>
 					</form>
 				</div>
+			</div>
+			<div style="text-align: center">
+				<br>
+				<a>
+					<img src="./img/kakao_login_medium_wide.png">
+				</a>
+				<br>
 			</div>
 		</div>
 	</main>
