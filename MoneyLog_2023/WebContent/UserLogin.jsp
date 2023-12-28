@@ -75,7 +75,7 @@
 			</div>
 			<div style="text-align: center">
 				<br>
-				<a>
+				<a href="#">
 					<img src="./img/kakao_login_medium_wide.png">
 				</a>
 				<br>

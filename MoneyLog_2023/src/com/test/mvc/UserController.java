@@ -220,10 +220,12 @@ public class UserController
 	 
 	 
 	 // 이전페이지 가기(plusInputFst.jsp → InfoInput.jsp 페이지로 이동~!!! )
-	 @RequestMapping(value = "/preinfoinput.action", method = RequestMethod.POST)
+	 //	 @RequestMapping(value = "/preinfoinput.action", method = RequestMethod.POST)
+	 @RequestMapping(value = "/preinfoinput.action", method = {RequestMethod.GET, RequestMethod.POST})
 	 public String preinfoinput(UserDTO user) throws SQLException
 	 {
-		return "/UserReInfoInput.jsp";
+		// return "/UserReInfoInput.jsp";
+		return "/registerform.action";
 	 }
 	 
 
