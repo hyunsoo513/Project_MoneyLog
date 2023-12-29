@@ -24,31 +24,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</insert>
 	
 	
-	<!-- 6월 수입 총액 -->
-	<select id="monthInTotFst" resultType="java.lang.Integer" parameterType="com.test.mvc.UserDTO">
-		SELECT NVL(SUM(A.AMNT),0)
-		FROM ACNT A JOIN CATE_SEC CS
-		  ON A.CATE_SEC_CD = CS.CATE_SEC_CD
-		     JOIN CATE_FST CF
-		       ON CS.CATE_FST_CD = CF.CATE_FST_CD
-		WHERE A.USER_DSTN_CD=#{user_dstn_cd}
-		  AND FN_YEAR(ACNT_DATE)='2022' AND FN_MON(ACNT_DATE)='6'
-		  AND CF.INOUT_CD=1
-	</select>
-	
-	<!-- 6월 지출 총액 -->
-	<select id="monthOutTotFst" resultType="java.lang.Integer" parameterType="com.test.mvc.UserDTO">
-		SELECT NVL(SUM(A.AMNT),0)
-		FROM ACNT A JOIN CATE_SEC CS
-		  ON A.CATE_SEC_CD = CS.CATE_SEC_CD
-		     JOIN CATE_FST CF
-		       ON CS.CATE_FST_CD = CF.CATE_FST_CD
-		WHERE USER_DSTN_CD=#{user_dstn_cd}
-		  AND FN_YEAR(ACNT_DATE)='2022' AND FN_MON(ACNT_DATE)='6'
-		  AND CF.INOUT_CD=2
-	</select>
-	
-	
 	<!-- 해당월 수입 총액 -->
 	<select id="monthInTot" resultType="java.lang.Integer" parameterType="com.test.mvc.UserDTO">
 		SELECT NVL(SUM(A.AMNT),0)
@@ -505,8 +480,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE INOUT_CD=#{inout_cd}
 	</select>
 	-->
-	
-	<!-- 태형 추가 -->
 	
 	
 	<!-- 해당 년월 일별 수입 총합 -->

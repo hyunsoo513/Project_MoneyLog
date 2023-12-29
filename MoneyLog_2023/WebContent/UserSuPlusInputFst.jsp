@@ -85,7 +85,7 @@
 <div class="wrap">
 	<header>
 		<!-- ○ 상단 네비게이션 include -->
-		<jsp:include page="./UserNav.jsp"></jsp:include>
+		<jsp:include page="./GuestNavTerm.jsp"></jsp:include>
 	</header>
 
 	<main id="userSuPlusInputFst">
