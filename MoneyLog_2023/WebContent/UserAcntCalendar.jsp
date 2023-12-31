@@ -157,7 +157,7 @@
 						<button type="button" class="btn btn-primary" style="width: 150px; height:150px; border-radius:100px; background-color: #f79900; font-size: 20px" onclick="moveMonthIn()">
 							수입<br />
 							<span style="font-size: 17px;">
-								<fmt:formatNumber value="${monthInTot }" groupingUsed="true"></fmt:formatNumber> 원
+								<fmt:formatNumber value="${monthInTot }" groupingUsed="true"/> 원
 							</span>
 						</button>	
 						<!-- <a href="monthinlist.action" style="color: #f79900; font-size: 30px">
@@ -172,7 +172,7 @@
 						<button type="button" class="btn btn-primary" style="width: 150px; height:150px; border-radius:100px; background-color: #03a313; font-size: 20px" onclick="moveMonthOut()">
 							지출 <br />
 							<span style="font-size: 17px;">
-								<fmt:formatNumber value="${monthOutTot }" groupingUsed="true"></fmt:formatNumber> 원
+								<fmt:formatNumber value="${monthOutTot }" groupingUsed="true"/> 원
 							</span>
 						</button>
 						<!-- <a href="monthoutlist.action" style="color: #03a313; font-size: 30px">
@@ -187,12 +187,12 @@
 			<div class="col-6" style="text-align: left;">
 				<span style="color: #f79900">
 					이월
-					<fmt:formatNumber value="${nowRemain-monthInTot+monthOutTot }" groupingUsed="true"></fmt:formatNumber> 원
+					<fmt:formatNumber value="${nowRemain-monthInTot+monthOutTot }" groupingUsed="true"/> 원
 				</span>
 			</div>
 			<div class="col-6" style="text-align: right;">
 				<span style="color: #03a313;">
-					잔액 <fmt:formatNumber value="${nowRemain }" groupingUsed="true"></fmt:formatNumber> 원
+					잔액 <fmt:formatNumber value="${nowRemain }" groupingUsed="true"/> 원
 				</span>
 			</div>
 		</div>

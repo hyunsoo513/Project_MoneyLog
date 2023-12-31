@@ -287,8 +287,7 @@
      <div class="container mt-3">
       	<div class="row">
       		<div class="col-12" style="text-align: center;">
-      			<h1>${year }</h1><br>
-    			<h2>${month}월 ${day}일 가계부</h2>
+      			<h1>${year }년 ${month}월 ${day}일</h1> 
     		</div>
 	    </div>
 	    
@@ -297,7 +296,7 @@
 					<tbody>
 						<tr>
 							<td>
-								<select name="inout_cd" id ="inout_cd" style="width: 100%;">
+								<select name="inout_cd" id ="inout_cd" style="width: 80%; margin-left: 10px;">
 									<option value="" selected>구분</option>
 									<c:if test="${not empty inoutCateList}">
 									<c:forEach var="inoutCate" items="${inoutCateList }" varStatus="status">
@@ -336,10 +335,10 @@
 								<input type="text"style="width: 100%;" id="amnt" name="amnt" placeholder="금액 입력">
 							</td>
 							<td>
-								<button id="next-btn" type="button" class="btn btn-primary" onclick="acntreg()" style="background-color: #1fa766; width: 100%;">등록</button>
+								<button id="next-btn" type="button" class="btn btn-primary" onclick="acntreg()" style="background-color: #1fa766; width: 100%; margin-left: 10px;">등록</button>
 							</td>
 							<td>
-								<img src="img2/icon.png" alt="아이콘" style="width: 35px;">
+								<img src="img2/icon.png" alt="아이콘" style="width: 35px; margin-left: 10px;">
 							</td>
 						</tr>
 					</tbody>
@@ -350,11 +349,12 @@
 	    		<table class="table table-striped" >
 			        <thead>
 			            <tr>
-			                <th class="mobile" style="width: 120px; text-align: center;">분류</th>
-			                <th class="mobile" style="width: 120px; text-align: center;">1차 분류</th>
-			                <th style="width: 120px; text-align: center;">2차 분류</th>
-			                <th class="mobile" style="text-align: center;">상세내역</th>
-			                <th style="width: 200px; text-align: center;">금액</th>
+			                <th class="mobile" style="width: 120px; text-align: center; font-weight: bold;">분류</th>
+			                <th class="mobile" style="width: 150px; text-align: center; font-weight: bold;">1차 분류</th>
+			                <th style="width: 150px; text-align: center; font-weight: bold;">2차 분류</th>
+			                <th class="mobile" style="text-align: center; font-weight: bold;">상세내역</th>
+			                <th style="width: 200px; text-align: center; font-weight: bold;">금액</th>
+			                <th style="width: 90px;"></th>
 			            </tr>
 			        </thead>
 			        <tbody>
@@ -374,8 +374,16 @@
 				                <td style="text-align: center;">${dayList.cate_sec_name}</td>
 				                <td style="text-align: center;">${dayList.acnt_dtl_cont}</td>
 				                <td class="mobile" style="text-align: center;">
-					                <fmt:formatNumber value="${dayList.amnt}" groupingUsed="true"></fmt:formatNumber>
+					                <fmt:formatNumber value="${dayList.amnt}" groupingUsed="true"/>
 			                	</td>
+			                	<td>
+			                		<a href="">
+			                			<img alt="" src="img2/edit-button.png" style="width: 15px; margin-right: 15px; margin-bottom: 5px;">
+			                		</a>	
+			                		<a href="">
+				                		<img alt="" src="img2/delete-button.png" style="width: 15px; margin-bottom: 5px;">
+			                		</a>	
+		                		</td>
 							</tr>
 						 	</c:forEach>	
 					 	</c:if>
@@ -385,6 +393,7 @@
 			    </table>	
 	    	</div>
 	    </div>
+		<br><br><br><br>
 		<div class="row">
 			<div class="col-12">
 				<div class="text-center" style="margin-right: auto; margin-left: auto;">
