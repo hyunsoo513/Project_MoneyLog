@@ -33,11 +33,11 @@
 	    		<table class="table table-striped" >
 			        <thead>
 			            <tr>
-			                <th class="mobile" style="width: 120px; text-align: center;">날짜</th>
-			                <th class="mobile" style="width: 120px; text-align: center;">1차 분류</th>
-			                <th style="width: 120px; text-align: center;">2차 분류</th>
-			                <th class="mobile" style="text-align: center;">상세내역</th>
-			                <th style="width: 200px; text-align: center;">금액</th>
+			                <th class="mobile" style="width: 120px; text-align: center; font-weight: bold;">날짜</th>
+			                <th class="mobile" style="width: 120px; text-align: center; font-weight: bold;">1차 분류</th>
+			                <th style="width: 120px; text-align: center; font-weight: bold;">2차 분류</th>
+			                <th class="mobile" style="text-align: center; font-weight: bold;">상세내역</th>
+			                <th style="width: 200px; text-align: center; font-weight: bold;">금액</th>
 			            </tr>
 			        </thead>
 			        <tbody>

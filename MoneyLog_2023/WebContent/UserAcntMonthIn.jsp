@@ -26,7 +26,7 @@
 	    </div>
 	    <div class="row">
 	    	<div class="col-12">
-	    		 ${year}년 ${month}월 수입 합계 : <fmt:formatNumber value="${monthInTot }" groupingUsed="true"></fmt:formatNumber> 원
+	    		 ${year}년 ${month}월 수입 합계 : <fmt:formatNumber value="${monthInTot }" groupingUsed="true"/> 원
 	    	</div>
 	    </div>
 	    <div class="row mt-3">
@@ -34,11 +34,11 @@
 	    		<table class="table table-striped" >
 			        <thead>
 			            <tr>
-			                <th class="mobile" style="width: 120px; text-align: center;">날짜</th>
-			                <th class="mobile" style="width: 120px; text-align: center;">1차 분류</th>
-			                <th style="width: 120px; text-align: center;">2차 분류</th>
-			                <th class="mobile" style="text-align: center;">상세내역</th>
-			                <th style="width: 200px; text-align: center;">금액</th>
+			                <th class="mobile" style="width: 120px; text-align: center; font-weight: bold;">날짜</th>
+			                <th class="mobile" style="width: 120px; text-align: center; font-weight: bold;">1차 분류</th>
+			                <th style="width: 120px; text-align: center; font-weight: bold;">2차 분류</th>
+			                <th class="mobile" style="text-align: center; font-weight: bold;">상세내역</th>
+			                <th style="width: 200px; text-align: center; font-weight: bold;">금액</th>
 			            </tr>
 			        </thead>
 			        <tbody>
@@ -59,7 +59,7 @@
 			                <td style="text-align: center;">${monInList.cate_sec_name }</td>
 			                <td style="text-align: center;">${monInList.acnt_dtl_cont }</td>
 			                <td class="mobile" style="text-align: center;">
-     					        <fmt:formatNumber value="${monInList.amnt }" groupingUsed="true"></fmt:formatNumber>
+     					        <fmt:formatNumber value="${monInList.amnt }" groupingUsed="true"/>
 		                	</td>
 						</tr>
 					 	</c:forEach>	
