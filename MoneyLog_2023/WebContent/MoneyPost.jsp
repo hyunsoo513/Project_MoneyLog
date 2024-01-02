@@ -214,12 +214,12 @@
                <div class="form-group text-center">
                   
                   <!-- <h1 style="font-weight: 300; font-size: 20pt; color: blue;">#30대 #여자 #반려동물3마리이상 #가족구성원2명 #자녀수없음 #자차없음 #IT/개발</h1> -->
-                  <h1 style="font-weight: 300; font-size: 15pt; color: blue;">
+                  <h1 style="font-weight: 300; font-size: 13pt; color: blue;">
 	                  <c:forEach var="post" items="${postFind }">
 	                  	${post.post_title}
 	                  </c:forEach>
                   </h1>
-                  
+                  <br>
                   <h2><!-- 익명의  -->
 	                  <c:forEach var="post" items="${postFind}">
 	                  	${post.month}
@@ -240,14 +240,11 @@
 						<!-- 전체 수입 / 지출 내역 -->
 						<div class="col-md-12">
 							<div class="list-group">
-								<br><br>
-								<h4 style="text-align: center;"> 수입 / 지출 <small> </small> </h4>
-								
+								<!--  <h4 style="text-align: center;"> 수입 / 지출 <small> </small> </h4> -->
 								<div class="list-group-item">
 									<div class="list-group">
 										<table class="table" style="max-width: 1080px;">
 								            <thead>
-								            
 								            	<!-- 상세내역 공개/비공개 -->
 												<c:forEach var="dtlCheck" items="${postFind }">
 												<c:set var="loop_flag" value="false" />
@@ -311,7 +308,7 @@
 												                <td style="text-align:center;">${inout.cate_fst_name}</td>
 												                <td style="text-align:center;">${inout.cate_sec_name}</td>
 												                <td style="text-align:center;">${inout.acnt_dtl_cont}</td>
-												                <td style="text-align:center; color: blue;"> ${inout.amnt} </td>
+												                <td style="text-align:center; color: blue;"><fmt:formatNumber value="${inout.amnt}" groupingUsed="true"/>원</td>
 												            </tr>
 														
 															<c:set var="loop_flag" value="true" />
@@ -329,7 +326,7 @@
 											                <td style="text-align:center; color: blue;">${inout.inout_cont}</td>
 											                <td style="text-align:center;">${inout.cate_fst_name}</td>
 											                <td style="text-align:center;">${inout.cate_sec_name}</td>
-											                <td style="text-align:center; color: blue;"> ${inout.amnt} </td>
+											                <td style="text-align:center; color: blue;"><fmt:formatNumber value="${inout.amnt}" groupingUsed="true"/>원</td>
 											            </tr>
 														
 													</c:if>
@@ -358,7 +355,7 @@
 											                <td style="text-align:center;">${inout.cate_fst_name}</td>
 											                <td style="text-align:center;">${inout.cate_sec_name}</td>
 											                <td style="text-align:center;">${inout.acnt_dtl_cont}</td>
-											                <td style="text-align:center; color: red;"> ${inout.amnt} </td>
+											                <td style="text-align:center; color: red;"><fmt:formatNumber value="${inout.amnt}" groupingUsed="true"/>원</td>
 											            </tr>
 													
 														<c:set var="loop_flag" value="true" />
@@ -376,7 +373,7 @@
 										                <td style="text-align:center; color: red;">${inout.inout_cont}</td>
 										                <td style="text-align:center;">${inout.cate_fst_name}</td>
 										                <td style="text-align:center;">${inout.cate_sec_name}</td>
-										                <td style="text-align:center; color: red;"> ${inout.amnt} </td>
+										                <td style="text-align:center; color: red;"><fmt:formatNumber value="${inout.amnt}" groupingUsed="true"/>원</td>
 										            </tr>
 													
 												</c:if>

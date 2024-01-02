@@ -25,7 +25,7 @@
 	    </div>
 	    <div class="row">
 	    	<div class="col-12">
-	    		${year}년 ${month}월 지출 합계 : <fmt:formatNumber value="${monthOutTot }" groupingUsed="true"></fmt:formatNumber> 원
+	    		${year}년 ${month}월 지출 합계 : <fmt:formatNumber value="${monthOutTot }" groupingUsed="true"/> 원
 	    	</div>
 	    </div>
 	    <div class="row mt-3" >

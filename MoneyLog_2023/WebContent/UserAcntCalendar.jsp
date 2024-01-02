@@ -97,7 +97,7 @@
 				if (i==${in.day})
 				{
 					// url += "<span class='in'>수입 : "+${in.tot}+" 원</span><br>";
-					url += "<span class='in'>수입 : <fmt:formatNumber value="${in.tot}" groupingUsed='true'></fmt:formatNumber> 원</span><br>";
+					url += "<span class='in'>수입 : <fmt:formatNumber value="${in.tot}" groupingUsed='true'/> 원</span><br>";
 				}
 			</c:forEach>
 			
@@ -106,7 +106,7 @@
 				if (i==${out.day})
 				{
 					// url += "<span class='out'>지출 : "+${out.tot}+" 원</span><br>";
-					url += "<span class='out'>지출 : <fmt:formatNumber value="${out.tot}" groupingUsed='true'></fmt:formatNumber> 원</span><br>";
+					url += "<span class='out'>지출 : <fmt:formatNumber value="${out.tot}" groupingUsed='true'/> 원</span><br>";
 				}
 			</c:forEach>
 	
