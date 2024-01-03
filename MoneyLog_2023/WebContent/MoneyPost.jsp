@@ -254,12 +254,12 @@
 													<c:if test="${dtlCheck.dtl_select_cd == 1 }">
 													
 														<tr>
-											                <th style="text-align:center;">날짜</th>
-											                <th style="text-align:center;">수입/지출</th>
-											                <th style="text-align:center;">1차 카테고리</th>
-											                <th style="text-align:center;">2차 카테고리</th>
-											                <th style="text-align:center;">상세내용</th>
-											                <th style="text-align:center;">금액</th>
+											                <th style="text-align:center; font-weight: bold;">날짜</th>
+											                <th style="text-align:center; font-weight: bold;">수입/지출</th>
+											                <th style="text-align:center; font-weight: bold;">1차 카테고리</th>
+											                <th style="text-align:center; font-weight: bold;">2차 카테고리</th>
+											                <th style="text-align:center; font-weight: bold;">상세내용</th>
+											                <th style="text-align:center; font-weight: bold;">금액</th>
 										              	</tr>
 													
 														<c:set var="loop_flag" value="true" />
@@ -270,11 +270,11 @@
 													<c:if test="${not loop_flag }">
 													
 													<tr>
-										                <th style="text-align:center;">날짜</th>
-										                <th style="text-align:center;">수입/지출</th>
-										                <th style="text-align:center;">1차 카테고리</th>
-										                <th style="text-align:center;">2차 카테고리</th>
-										                <th style="text-align:center;">금액</th>
+										                <th style="text-align:center; font-weight: bold;">날짜</th>
+										                <th style="text-align:center; font-weight: bold;">수입/지출</th>
+										                <th style="text-align:center; font-weight: bold;">1차 카테고리</th>
+										                <th style="text-align:center; font-weight: bold;">2차 카테고리</th>
+										                <th style="text-align:center; font-weight: bold;">금액</th>
 													</tr>
 													
 												</c:if>
@@ -429,7 +429,7 @@
 										role="progressbar"
 										style=";font-size: 13pt; color: #f79900; width: ${totalIn / (totalIn + totalOut) * 100 }%;"
 										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-										${totalIn }
+										<fmt:formatNumber value="${totalIn }" groupingUsed="true"/>원
 									</div>
 									
 									<!-- 지출 총액 -->
@@ -437,7 +437,7 @@
 										role="progressbar"
 										style="font-size: 13pt; color: #03a313; width: ${totalOut / (totalIn + totalOut) * 100 }%;"
 										aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-										${totalOut }
+										<fmt:formatNumber value="${totalOut }" groupingUsed="true"/>원
 									</div>
 
 								</div>
@@ -1123,9 +1123,9 @@
 			type : 'doughnut',
 			data : {
 				labels : [ "주수입" + " : "+idata1+" [ "+ (idata1/hap2*100).toFixed(3) + " %" +" ]"
-					, "부수입" + " : "+idata2+" [ "+ (idata2/hap2*100).toFixed(3) + " %" +" ]"
-					, "저축" + " : "+idata3+" [ "+ (idata3/hap2*100).toFixed(3) + " %" +" ]"
-					],
+						 , "부수입" + " : "+idata2+" [ "+ (idata2/hap2*100).toFixed(3) + " %" +" ]"
+						 , "저축" + " : "+idata3+" [ "+ (idata3/hap2*100).toFixed(3) + " %" +" ]"
+						 ],
 				datasets : [
 					{
 						data : [ idata1, idata2, idata3],
