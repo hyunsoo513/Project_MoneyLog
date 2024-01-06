@@ -379,6 +379,7 @@
 			                	<td>
 			                		<a href="">
 			                			<img alt="" src="img2/edit-button.png" style="width: 15px; margin-right: 15px; margin-bottom: 5px;">
+			                			<!-- ${dayList.acnt_cd} -->
 			                		</a>	
 			                		<a href="">
 				                		<img alt="" src="img2/delete-button.png" style="width: 15px; margin-bottom: 5px;">

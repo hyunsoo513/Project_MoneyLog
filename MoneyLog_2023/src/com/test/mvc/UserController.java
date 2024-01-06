@@ -521,6 +521,33 @@ public class UserController
 		return mv;
 	}
 	
+	
+	// 가계부 삭제 처리
+	@RequestMapping(value = "/acntdelete.action", method = RequestMethod.GET)
+	public String acntDelete(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model, UserDTO dto)
+	{
+		String result = null;
+		/*
+		
+	    IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
+	  
+	    // 세션에 있는 사용자 코드 얻어와서 dto에 set 
+	 	dto.setUser_dstn_cd((String)session.getAttribute("user_dstn_cd"));
+	 	dto.setUser_name((String)session.getAttribute("user_name"));
+		 
+	 	String qna_cd = request.getParameter("qna_cd");
+       
+	 	dto.setQna_cd(qna_cd);
+	 	
+        dao.userQnaDelete(dto);   
+        
+		result = "/userqnalist.action"; 
+		
+		*/
+		return result;
+	}
+	
+	
 	/*
 	// ajax 처리 
 	@RequestMapping(value = "/ajax.action", method = RequestMethod.GET)

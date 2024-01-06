@@ -204,26 +204,7 @@
 		var idata1 = ${data.cate_fst_1};
 		var idata2 =${data.cate_fst_2};
 		var idata3 =${data.cate_fst_3};
-	    /* var data1 = ${data.cate_fst_4};
-	    var data2 = ${data.cate_fst_5};
-	    var data3 = ${data.cate_fst_6};
-	    var data4 = ${data.cate_fst_7};
-	    var data5 = ${data.cate_fst_8};
-	    var data6 = ${data.cate_fst_9};
-	    var data7 = ${data.cate_fst_10};
-	    var data8 = ${data.cate_fst_11};
-	    var data9 = ${data.cate_fst_12};
-	    var data10= ${data.cate_fst_13};
-	    var data11= ${data.cate_fst_14};
-	    var data12= ${data.cate_fst_15};
-	    var data13= ${data.cate_fst_16};
-	    var data14= ${data.cate_fst_17};
-	    var data15= ${data.cate_fst_18};
-	    var data16= ${data.cate_fst_19}; */
 	</c:forEach>
-	
-	// 지출합
-	//var hap = data1+data2+data3+data4+data5+data6+data7+data8+data9+data10+data11+data12+data13+data14+data15+data16;
 	
 	// 수입합
 	var hap2 = idata1+idata2+idata3;

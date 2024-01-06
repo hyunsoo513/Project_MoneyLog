@@ -200,9 +200,6 @@
     
 	<!-- 모든 카테고리별 총합 데이터 수신 -->
 	<c:forEach var="data" items="${inOutData }">
-		/* var idata1 = ${data.cate_fst_1};
-		var idata2 =${data.cate_fst_2};
-		var idata3 =${data.cate_fst_3}; */
 	    var data1 = ${data.cate_fst_4};
 	    var data2 = ${data.cate_fst_5};
 	    var data3 = ${data.cate_fst_6};
@@ -223,9 +220,6 @@
 	
 	// 지출합
 	var hap = data1+data2+data3+data4+data5+data6+data7+data8+data9+data10+data11+data12+data13+data14+data15+data16;
-	
-	// 수입합
-	//var hap2 = idata1+idata2+idata3;
 
 	// 지출 그래프
 	var ctxP = document.getElementById('myChart').getContext('2d');
