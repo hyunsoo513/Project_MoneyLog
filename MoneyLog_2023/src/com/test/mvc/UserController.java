@@ -495,7 +495,7 @@ public class UserController
 		
 	
 	// 가계부 등록 처리
-	@RequestMapping(value="acntreg.action", method = RequestMethod.GET)
+	@RequestMapping(value="/acntreg.action", method = RequestMethod.GET)
 	public ModelAndView acntReg(UserDTO dto, HttpServletRequest request, HttpServletResponse response,  HttpSession session)
 	{
 		IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
@@ -522,31 +522,21 @@ public class UserController
 	}
 	
 	
-	// 가계부 삭제 처리
+	// 가계부 삭제 처리 -> 수정 필요
 	@RequestMapping(value = "/acntdelete.action", method = RequestMethod.GET)
-	public String acntDelete(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model, UserDTO dto)
+	public String acntDelete(HttpServletRequest request, HttpServletResponse response, UserDTO dto)
 	{
 		String result = null;
-		/*
+		IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
+		String acnt_cd = request.getParameter("acnt_cd");
 		
-	    IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
-	  
-	    // 세션에 있는 사용자 코드 얻어와서 dto에 set 
-	 	dto.setUser_dstn_cd((String)session.getAttribute("user_dstn_cd"));
-	 	dto.setUser_name((String)session.getAttribute("user_name"));
-		 
-	 	String qna_cd = request.getParameter("qna_cd");
-       
-	 	dto.setQna_cd(qna_cd);
-	 	
-        dao.userQnaDelete(dto);   
-        
-		result = "/userqnalist.action"; 
+		dto.setAcnt_cd(acnt_cd);
+		dao.acntDel(dto);   
 		
-		*/
+		result = "/useracntdaylist.action"; 
+
 		return result;
 	}
-	
 	
 	/*
 	// ajax 처리 

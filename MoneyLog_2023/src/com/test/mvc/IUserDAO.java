@@ -8,14 +8,14 @@ import org.apache.ibatis.annotations.Param;
 public interface IUserDAO
 {
 	
-	// 로그인/회원가입(민지) ===========================================================================
+	// 로그인/회원가입==================================================================================
 	
 	public UserDTO login(@Param("user_id") String user_id, @Param("user_pw") String user_pw);
 	
 	// 회원등록 메소드
 	public int add(UserDTO dto) throws SQLException;
 	
-	// ========================================================================== 로그인/회원가입(민지)
+	// ========================================================================== 로그인/회원가입
 	
 	public Integer monthInTotFst(UserDTO dto);
 	public Integer monthOutTotFst(UserDTO dto);
@@ -45,6 +45,9 @@ public interface IUserDAO
 	public ArrayList<UserDTO> secCateList();
 	public int acntReg(UserDTO dto);
 	
+	// 가계부 삭제
+	public int acntDel(UserDTO dto);
+	
 	// public ArrayList<UserDTO> fstCateListOne(UserDTO dto);
 	// public ArrayList<UserDTO> fstCateListTwo(UserDTO dto);
 	
@@ -52,7 +55,7 @@ public interface IUserDAO
 	// public List<UserDTO> getList();
 	// public UserDTO getName();
 	
-	// 마이페이지(현지)  ================================================================================
+	// 마이페이지  ================================================================================
 
 	// 내 게시글 목록 확인
 	public ArrayList<UserDTO> myPostList(UserDTO dto);
@@ -118,7 +121,6 @@ public interface IUserDAO
  	public int userQnaDelete(UserDTO dto);
  	
  	
-	// ▼ 태형추가 ------------------------------------------------------
  	public ArrayList<UserDTO> calendarInTot(UserDTO dto); 
  	public ArrayList<UserDTO> calendarOutTot(UserDTO dto); 
  	public ArrayList<UserDTO> inOutData(UserDTO dto); 

@@ -234,7 +234,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<delete id="acntDel">
 		DELETE
 		FROM ACNT
-		WHERE USER_DSTN_CD = #{user_dstn_cd} AND ACNT_CD = #{acnt_cd}
+		WHERE ACNT_CD = #{acnt_cd}
 	</delete>
 	
 	
