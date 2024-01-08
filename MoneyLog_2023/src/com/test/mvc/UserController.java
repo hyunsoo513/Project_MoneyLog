@@ -522,20 +522,27 @@ public class UserController
 	}
 	
 	
-	// 가계부 삭제 처리 -> 수정 필요
+	// 가계부 삭제 처리
+	// acnt_cd 노출 > post 변경하기
 	@RequestMapping(value = "/acntdelete.action", method = RequestMethod.GET)
-	public String acntDelete(HttpServletRequest request, HttpServletResponse response, UserDTO dto)
+	public ModelAndView acntDelete(HttpServletRequest request, HttpServletResponse response, UserDTO dto)
 	{
-		String result = null;
 		IUserDAO dao = sqlSession.getMapper(IUserDAO.class);
+		
+		ModelAndView mv = new ModelAndView();
+		
 		String acnt_cd = request.getParameter("acnt_cd");
 		
 		dto.setAcnt_cd(acnt_cd);
 		dao.acntDel(dto);   
 		
-		result = "/useracntdaylist.action"; 
+		mv.addObject("year", request.getParameter("year"));
+		mv.addObject("month", request.getParameter("month"));
+		mv.addObject("day", request.getParameter("day"));
+		
+		mv.setViewName("/useracntdaylist.action");
 
-		return result;
+		return mv;
 	}
 	
 	/*

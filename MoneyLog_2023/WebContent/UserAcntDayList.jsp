@@ -83,6 +83,12 @@
 		window.location.href = "./acntreg.action?user_dstn_cd="+user_dstn_cd+"&year="+year+"&month="+month+"&day="+day+"&cate_sec_cd="+cate2_cd+"&acnt_dtl_cont="+acnt_dtl_cont+"&amnt="+amnt;
 		
 	}
+	
+	// 가계부 내역 삭제
+	function delchk()
+	{
+		return confirm("해당 내역을 삭제하시겠습니까?");
+	}
 
 	// 유효성검사
 	$(document).ready(function()
@@ -380,7 +386,7 @@
 			                		<a href="">
 			                			<img alt="" src="img2/edit-button.png" style="width: 15px; margin-right: 15px; margin-bottom: 5px;">
 			                		</a>	
-			                		<a href="acntdelete.action?acnt_cd=${dayList.acnt_cd}">
+			                		<a href="acntdelete.action?year=${year }&month=${month}&day=${day}&acnt_cd=${dayList.acnt_cd}" onclick="return delchk();">
 				                		<img alt="" src="img2/delete-button.png" style="width: 15px; margin-bottom: 5px;">
 			                			<!-- ${dayList.acnt_cd} -->
 			                		</a>	
