@@ -383,7 +383,7 @@
 					                <fmt:formatNumber value="${dayList.amnt}" groupingUsed="true"/>
 			                	</td>
 			                	<td>
-			                		<a href="acntedit.action">
+			                		<a href="acntupdate.action">
 			                			<img alt="" src="img2/edit-button.png" style="width: 15px; margin-right: 15px; margin-bottom: 5px;">
 			                		</a>	
 			                		<a href="acntdelete.action?year=${year }&month=${month}&day=${day}&acnt_cd=${dayList.acnt_cd}" onclick="return delchk();">

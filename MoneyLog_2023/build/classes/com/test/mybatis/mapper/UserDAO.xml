@@ -231,7 +231,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 1_9 추가 -->
 	<!-- 가계부 내역 수정 -->
 	<!-- 
-	<update id="acntUpdate">
+	<update id="acntEdit">
 		UPDATE ACNT
 		SET 
 		WHERE ACNT_CD = #{acnt_cd}

@@ -521,6 +521,14 @@ public class UserController
 		return mv;
 	}
 	
+	// 가계부 수정
+	@RequestMapping(value = "/acntupdate.action", method = RequestMethod.GET)
+	public ModelAndView acntUpdate(HttpServletRequest request, HttpServletResponse response, UserDTO dto)
+	{
+		ModelAndView mv = new ModelAndView();
+		return mv;
+	}
+	
 	
 	// 가계부 삭제 처리
 	// acnt_cd 노출 > post 변경하기
