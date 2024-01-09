@@ -228,9 +228,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			 , #{cate_sec_cd} , #{acnt_dtl_cont}, #{amnt})
 	</insert>
 	
+	<!-- 1_9 추가 -->
+	<!-- 가계부 내역 수정 -->
+	<!-- 
+	<update id="acntUpdate">
+		UPDATE ACNT
+		SET 
+		WHERE ACNT_CD = #{acnt_cd}
+	</update>
+	 -->
 	
-	<!-- 2024-01-06 추가작성 -->
-	<!-- 가계부 등록내역 삭제 -->
+	<!-- 가계부 내역 삭제 -->
 	<delete id="acntDel">
 		DELETE
 		FROM ACNT
