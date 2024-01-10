@@ -1090,8 +1090,6 @@ public class UserController
 	}
 	
 	
-	// 현수 추가 ================================================================================================
-	
 	// 고객센터 사이드바에서 공지사항 클릭시 공지사항 리스트      
 	@RequestMapping(value="/usernotilist.action", method=RequestMethod.GET)
 	public ModelAndView UserNotiList()

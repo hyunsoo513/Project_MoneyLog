@@ -72,6 +72,7 @@
 			</div>
 		</div>
 	</div>
+	<br>
 					
 	<div class="container">
 		<div class="row">
@@ -80,12 +81,12 @@
 					  <thead>
 					     <tr>
 					        <!-- 항목 -->
-					         <th>no</th>
-					         <th>제목</th>
-					         <th>작성자</th> 
-					         <th>답변</th> 
-					         <th>등록일자</th>
-					         <th>조회수</th>
+					         <th class="mobile" style="text-align:center;">no</th>
+					         <th class="mobile" style="text-align:center;">제목</th>
+					         <th class="mobile" style="text-align:center;">작성자</th> 
+					         <th class="mobile" style="text-align:center;">답변</th> 
+					         <th class="mobile" style="text-align:center;">등록일자</th>
+					         <th class="mobile" style="text-align:center;">조회수</th>
 					      </tr>	
 			    	 </thead>
 			         <tbody>
