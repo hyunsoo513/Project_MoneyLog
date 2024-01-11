@@ -154,6 +154,7 @@
 					<div class="list-group">
 						<br>
 						<h4>비밀번호 변경<small> 현재 비밀번호와 새로운 비밀번호를 입력해주세요</small></h4>
+						<br>
 						<div class="list-group-item">
 							<div class="list-group">
 								<form action="mypwmodifyok.action" id="myPwModifyForm" method="post">
@@ -161,17 +162,15 @@
 	            					<b>현재 비밀번호</b>
 	            					<input type="password" id="pw" name="pw" class="text-field form-control" placeholder="현재 비밀번호 입력" />
                                     <span id="err1" style="color: red; font-weight: bold; display: none;">비밀번호가 틀렸습니다.</span>
-	            					<br><br>
 	            					
 	            					<b>새 비밀번호</b>
 	            					<input type="password" id="newPw1" name="newPw1" class="text-field form-control" placeholder="새 비밀번호 입력 (8~15 자리의 영문 + 숫자 + 특수문자 조합)" />
 	            					<span id="err2" style="color: red; font-weight: bold; display: none;">신규 비밀번호는 8~15자의 영문, 숫자 및 특수문자를 모두 혼합하여 설정해주세요.</span> 
-	            					<br><br>
 	            					
 	            					<b>새 비밀번호 확인</b>
 	            					<input type="password" id="newPw2" name="newPw2" class="text-field form-control" placeholder="새 비밀번호 확인" />
 	            					<span id="err3" style="color: red; font-weight: bold; display: none;">비밀번호와 확인값이 일치하지 않습니다.</span> 
-	            					<br><br>
+	            					<br>
 	            					
 	            					<button type="button" class="btn btn-primary" id="pwModify-btn" style="width:100%; background-color: #1fa766;"
 									> 확인 </button>
@@ -186,7 +185,6 @@
 				</div>
 			</div>
 			
-			<!-- 밑에 공백만드는용 ㅠ -->
 			<br><br><br><br><br><br><br><br><br><br>
 			<br><br><br><br><br><br><br><br><br><br>
 			<br><br><br><br><br><br><br><br><br><br>
@@ -196,7 +194,7 @@
 
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		머니로그의 푸터 부분입니다. </footer>
+		MoneyLog. </footer>
 
 
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
