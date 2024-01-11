@@ -185,7 +185,7 @@
 	</div>
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		머니로그의 푸터 부분입니다. </footer>
+		MoneyLog. </footer>
 
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery-3.2.1.min.js"></script>
@@ -214,9 +214,9 @@
 	var myChart2 = new Chart(ctxP, {
 		type : 'doughnut',
 		data : {
-			labels : [ "주수입" + " : "+idata1+" [ "+ (idata1/hap2*100).toFixed(3) + " %" +" ]"
-				, "부수입" + " : "+idata2+" [ "+ (idata2/hap2*100).toFixed(3) + " %" +" ]"
-				, "저축" + " : "+idata3+" [ "+ (idata3/hap2*100).toFixed(3) + " %" +" ]"
+			labels : [ "주수입" + " : "+idata1.toLocaleString('ko-KR')+" [ "+ (idata1/hap2*100).toFixed(1) + " %" +" ]"
+				, "부수입" + " : "+idata2.toLocaleString('ko-KR')+" [ "+ (idata2/hap2*100).toFixed(1) + " %" +" ]"
+				, "저축" + " : "+idata3.toLocaleString('ko-KR')+" [ "+ (idata3/hap2*100).toFixed(1) + " %" +" ]"
 				],
 			datasets : [
 				{

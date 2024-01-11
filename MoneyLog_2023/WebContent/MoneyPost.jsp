@@ -1028,7 +1028,7 @@
 	</div>
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		머니로그의 푸터 부분입니다. </footer>
+		MoneyLog. </footer>
 
 	<!-- 제이쿼리 자바스크립트 추가하기 -->
 	<script src="./js/jquery-3.2.1.min.js"></script>
@@ -1077,22 +1077,22 @@
 			type : 'doughnut',
 			data : {
 				labels : [ 
-					 "식비" + " : "+data1+" [ "+ (data1/hap*100).toFixed(3) + " %" +" ]"
-					, "카페/간식" + " : "+data2+" [ "+ (data2/hap*100).toFixed(3) + " %" +" ]"
-					, "통신/구독" + " : "+data3+" [ "+ (data3/hap*100).toFixed(3) + " %" +" ]"
-					, "쇼핑/생활" + " : "+data4+" [ "+ (data4/hap*100).toFixed(3) + " %" +" ]"
-					, "뷰티/미용" + " : "+data5+" [ "+ (data5/hap*100).toFixed(3) + " %" +" ]"
-					,"교통" + " : "+data6+" [ "+ (data6/hap*100).toFixed(3) + " %" +" ]"
-					, "자동차" + " : "+data7+" [ "+ (data7/hap*100).toFixed(3) + " %" +" ]"
-					, "주거" + " : "+data8+" [ "+ (data8/hap*100).toFixed(3) + " %" +" ]"
-					, "의료/건강" + " : "+data9+" [ "+ (data9/hap*100).toFixed(3) + " %" +" ]"
-					, "금융" + " : "+data10+" [ "+ (data10/hap*100).toFixed(3) + " %" +" ]"
-					, "문화/여가" + " : "+data11+" [ "+ (data11/hap*100).toFixed(3) + " %" +" ]"
-					, "여행/숙박" + " : "+data12+" [ "+ (data12/hap*100).toFixed(3) + " %" +" ]"
-					, "교육/학습" + " : "+data13+" [ "+ (data13/hap*100).toFixed(3) + " %" +" ]"
-					, "자녀/육아" + " : "+data14+" [ "+ (data14/hap*100).toFixed(3) + " %" +" ]"
-					, "반려동물" + " : "+data15+" [ "+ (data15/hap*100).toFixed(3) + " %" +" ]"
-					, "경조/선물" + " : "+data16+" [ "+ (data16/hap*100).toFixed(3) + " %" +" ]"
+					 "식비" + " : "+data1.toLocaleString('ko-KR')+" [ "+ (data1/hap*100).toFixed(1) + " %" +" ]"
+					, "카페/간식" + " : "+data2.toLocaleString('ko-KR')+" [ "+ (data2/hap*100).toFixed(1) + " %" +" ]"
+					, "통신/구독" + " : "+data3.toLocaleString('ko-KR')+" [ "+ (data3/hap*100).toFixed(1) + " %" +" ]"
+					, "쇼핑/생활" + " : "+data4.toLocaleString('ko-KR')+" [ "+ (data4/hap*100).toFixed(1) + " %" +" ]"
+					, "뷰티/미용" + " : "+data5.toLocaleString('ko-KR')+" [ "+ (data5/hap*100).toFixed(1) + " %" +" ]"
+					,"교통" + " : "+data6.toLocaleString('ko-KR')+" [ "+ (data6/hap*100).toFixed(1) + " %" +" ]"
+					, "자동차" + " : "+data7.toLocaleString('ko-KR')+" [ "+ (data7/hap*100).toFixed(1) + " %" +" ]"
+					, "주거" + " : "+data8.toLocaleString('ko-KR')+" [ "+ (data8/hap*100).toFixed(1) + " %" +" ]"
+					, "의료/건강" + " : "+data9.toLocaleString('ko-KR')+" [ "+ (data9/hap*100).toFixed(1) + " %" +" ]"
+					, "금융" + " : "+data10.toLocaleString('ko-KR')+" [ "+ (data10/hap*100).toFixed(1) + " %" +" ]"
+					, "문화/여가" + " : "+data11.toLocaleString('ko-KR')+" [ "+ (data11/hap*100).toFixed(1) + " %" +" ]"
+					, "여행/숙박" + " : "+data12.toLocaleString('ko-KR')+" [ "+ (data12/hap*100).toFixed(1) + " %" +" ]"
+					, "교육/학습" + " : "+data13.toLocaleString('ko-KR')+" [ "+ (data13/hap*100).toFixed(1) + " %" +" ]"
+					, "자녀/육아" + " : "+data14.toLocaleString('ko-KR')+" [ "+ (data14/hap*100).toFixed(1) + " %" +" ]"
+					, "반려동물" + " : "+data15.toLocaleString('ko-KR')+" [ "+ (data15/hap*100).toFixed(1) + " %" +" ]"
+					, "경조/선물" + " : "+data16.toLocaleString('ko-KR')+" [ "+ (data16/hap*100).toFixed(1) + " %" +" ]"
 					],
 				datasets : [
 					{
@@ -1122,9 +1122,9 @@
 		var myChart2 = new Chart(ctxP, {
 			type : 'doughnut',
 			data : {
-				labels : [ "주수입" + " : "+idata1+" [ "+ (idata1/hap2*100).toFixed(3) + " %" +" ]"
-						 , "부수입" + " : "+idata2+" [ "+ (idata2/hap2*100).toFixed(3) + " %" +" ]"
-						 , "저축" + " : "+idata3+" [ "+ (idata3/hap2*100).toFixed(3) + " %" +" ]"
+				labels : [ "주수입" + " : "+idata1.toLocaleString('ko-KR')+" [ "+ (idata1/hap2*100).toFixed(3) + " %" +" ]"
+						 , "부수입" + " : "+idata2.toLocaleString('ko-KR')+" [ "+ (idata2/hap2*100).toFixed(3) + " %" +" ]"
+						 , "저축" + " : "+idata3.toLocaleString('ko-KR')+" [ "+ (idata3/hap2*100).toFixed(3) + " %" +" ]"
 						 ],
 				datasets : [
 					{
