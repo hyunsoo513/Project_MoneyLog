@@ -113,26 +113,31 @@
 	
 		<div class="container">
 				<div class="row">
-						<table id="cont" class="table2 col-12">
+						<!-- 테이블 css 수정 필요! -->
+						<table id="cont" class="table2 col-12" style ="margin-top : 20px; border : 1px solid #000;">
 						     <tr>    
-						         <th>제목</th>
-						         <td>
-						         	<input type="text" id="qna_title" name="qna_title" value="${qna_title }">
+						         <th style="text-align:center; font-weight: bold;">제목</th>
+						         <td style="text-align:left;">${qna_title }
 						         	<input type="hidden" id="qna_cd" name="qna_cd" value="${qna_cd }">
+						         <!-- 
+						         	<input type="text" id="qna_title" name="qna_title" value="${qna_title }">
+						         -->
 						         </td>
 						     </tr> 
 						     <tr>    
-						         <th>등록일자</th>
-						         <td>
+						         <th style="text-align:center; font-weight: bold;">등록일자</th>
+						         <td style="text-align:left;">
 						         	<%-- ${qna_date } --%>
 			                		<fmt:parseDate value="${qna_date }" var="qna_date" pattern="yyyy-mm-dd" />
 									<fmt:formatDate value="${qna_date}" pattern="yyyy-mm-dd" />
 						         </td>
 						     </tr>  
 						     <tr>    
-						         <th>내용</th>
-						         <td>
+						         <th style="text-align:center; font-weight: bold;">내용</th>
+						         <td style="text-align:left;">${qna_cont }
+						         <!-- 
 						         	<textarea name="content" rows="10" cols="60" readonly="readonly">${qna_cont }</textarea>
+						         -->
 						     	</td>    
 						     </tr> 
 						</table>
