@@ -100,12 +100,13 @@
 				
 					<div class="list-group">
 						<br>
-						<h4>문의글 등록</h4>
-						<div class="list-group-item">
+						<div style="font-size: 20px; font-weight: bold; margin-left: 20px; margin-bottom: 20px;">문의글 등록</div>
+						<div class="list-group-item" style="margin-left: 20px;">
 							<div class="list-group">
 								<form action="userqnacont.action" id="qnaContForm">
-									
+	            					<!-- 
 	            					<b>제목<%=qna_cd %></b>
+	            					<b>제목</b>
 	            					<input type="text" id="qna_title" name="qna_title" style="padding-left:15px; width: 500px; height:35px;">
 	            					<span id="err1" style="color: red; display: none;">※ 제목을 입력하세요.</span>	
 	            					<br><br>
@@ -122,13 +123,37 @@
 	            					<textarea id="qna_cont" name="qna_cont" rows="10" cols="60" style="vertical-align: top;"></textarea>
 	            					<span id="err2" style="color: red; display: none;">※ 내용을 입력하세요.</span>	
 	            					<br><br>
-	            	
-	            					
-	            					<button type="button" class="btn btn-primary"  id="qnaReg-btn" style="background-color: #1fa766; float: right;"  
-	            					> 등록하기 </button>
-									<button type="reset" class="btn btn-secondary" style="background-color: #1fa766; float: right;"  
-									onclick="location.href='./userqnalist.action'">취소하기</button>
-									
+	            					 -->
+									<table style ="margin-left: 25px; border-collapse: separate; border-spacing: 0 10px;">
+										<tr>
+								        	<th style="font-weight: bold; width: 90px;">제목</th>
+								        	<td>
+									        	<input type="text" id="qna_title" name="qna_title" style="padding-left:15px; width: 500px; height:35px;">
+				            					<span id="err1" style="color: red; display: none;">※ 제목을 입력하세요.</span>	
+								        	</td>
+										</tr>
+										<tr>
+								        	<th style="font-weight: bold;">내용</th>
+								        	<td>
+				            					<textarea id="qna_cont" name="qna_cont" rows="10" cols="60" style="vertical-align: top;"></textarea>
+				            					<span id="err2" style="color: red; display: none;">※ 내용을 입력하세요.</span>	
+								        	</td>
+										</tr>
+										<tr>
+								        	<th>작성자</th>
+								        	<td>
+				            					<input type="text" id="user_name" name="user_name" value="${user_name }" style="padding-left:15px; width: 500px; height:35px; background-color: #EAE7E7; border:0 solid black;" readonly="readonly">
+								        	</td>
+										</tr>
+										<tr>
+								        	<th>작성일자</th>
+								        	<td>
+				            					<input type="text" id="qna_date"  name="qna_date" value="${qna_date }" style="padding-left:15px; width: 500px; height:35px; background-color: #EAE7E7; border:0 solid black;" readonly="readonly">
+								        	</td>
+										</tr>
+									</table>
+	            					<button type="button" class="btn btn-primary"  id="qnaReg-btn" style="background-color: #1fa766; float: right;">등록하기</button>
+									<button type="reset" class="btn btn-secondary" style="background-color: #1fa766; float: right;" onclick="location.href='./userqnalist.action'">취소하기</button>
 								</form>
 							</div>
 						</div>

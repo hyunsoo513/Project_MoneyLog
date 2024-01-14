@@ -111,7 +111,7 @@
 						<div class="list-group-item">
 							<div class="list-group">
 								<form action="userqnaupdate.action" id="qnaUpdateForm" >
-									
+									<!-- 
 	            					<b>제목</b>
 	            					<input type="text" id="qna_title" name="qna_title"  value="${qna_title }" style="padding-left:15px; width: 500px; height:35px;">
 	            					<span id="err1" style="color: red; display: none;">※ 제목을 입력하세요.</span>	
@@ -129,10 +129,44 @@
 	            					<textarea id="qna_cont" name="qna_cont" rows="10" cols="60" style="vertical-align: top;">${qna_cont }</textarea>
 	            					<span id="err2" style="color: red; display: none;">※ 내용을 입력하세요.</span>	
 	            					<br><br>
-	            	
+	            					 -->
+	            					
+	            					<table style ="margin-left: 25px; border-collapse: separate; border-spacing: 0 10px;">
+										<tr>
+								        	<th style="font-weight: bold; width: 90px;">제목</th>
+								        	<td>
+				            					<input type="text" id="qna_title" name="qna_title"  value="${qna_title }" style="padding-left:15px; width: 500px; height:35px;">
+				            					<span id="err1" style="color: red; display: none;">※ 제목을 입력하세요.</span>	
+								        	</td>
+										</tr>
+										<tr>
+								        	<th style="font-weight: bold;">내용</th>
+								        	<td>
+				            					<textarea id="qna_cont" name="qna_cont" rows="10" cols="60" style="vertical-align: top;">${qna_cont }</textarea>
+				            					<span id="err2" style="color: red; display: none;">※ 내용을 입력하세요.</span>	
+								        	</td>
+										</tr>
+										<tr>
+								        	<th>작성자</th>
+								        	<td>
+				            					<input type="text" id="user_name" name="user_name" value="${user_name }" style="padding-left:15px; width: 500px; height:35px; background-color: #EAE7E7; border:0 solid black;" readonly="readonly">
+								        	</td>
+										</tr>
+										<tr>
+								        	<th>작성일자</th>
+								        	<td>
+								        		date
+								        		<!-- 
+				            						<input type="text"  id="qna_date"  name="qna_date" value="<fmt:parseDate value='${qna_date }' var='qna_date' pattern='yyyy-mm-dd' /><fmt:formatDate value='${qna_date}' pattern='yyyy-mm-dd' />" style="padding-left:15px; width: 500px; height:35px; background-color: #EAE7E7; border:0 solid black;" readonly="readonly">​
+				            					 -->
+								        	</td>
+										</tr>
+									</table>
+	            					
+	            					
 	            					<input type="hidden" id="qna_cd" name="qna_cd"  value="${qna_cd }"/>
 	            					<!-- 컨트롤러에서 qna_cd가 필요하니까 hidden 으로 받아서 컨트롤러에서 받기 -->
-	            					
+	            					 
 	            					<button type="button" class="btn btn-primary"  id="qnaUpdateOk-btn" style="background-color: #1fa766; float: right;"> 수정하기 </button>
 									<button type="button" class="btn btn-secondary" id="qnaReset-btn" style="background-color: #1fa766; float: right;" value="${qna_cd }"> 취소하기 </button>
 									

@@ -116,7 +116,7 @@
 						<!-- 테이블 css 수정 필요! -->
 						<table id="cont" class="table2 col-12" style ="margin-left: 25px; border-collapse: separate; border-spacing: 0 8px;">
 						     <tr>    
-						         <th style="font-weight: bold;">제목</th>
+						         <th style="font-weight: bold; width: 120px;">제목</th>
 						         <td style="text-align:left;">${qna_title }
 						         	<input type="hidden" id="qna_cd" name="qna_cd" value="${qna_cd }">
 						         <!-- 
