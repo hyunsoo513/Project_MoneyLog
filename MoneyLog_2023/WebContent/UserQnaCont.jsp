@@ -105,18 +105,18 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12" id="List_title" style="margin-top: 30px;" >
-					<h5 style="font-weight: bold;">문의하기</h5>
-					<hr />
+					<div style="font-size: 20px; font-weight: bold; margin-left: 20px;">문의하기</div>
 				</div>
 			</div>
+		<hr />
 		</div>
 	
 		<div class="container">
 				<div class="row">
 						<!-- 테이블 css 수정 필요! -->
-						<table id="cont" class="table2 col-12" style ="margin-top : 20px; border : 1px solid #000;">
+						<table id="cont" class="table2 col-12" style ="margin-left: 25px; border-collapse: separate; border-spacing: 0 8px;">
 						     <tr>    
-						         <th style="text-align:center; font-weight: bold;">제목</th>
+						         <th style="font-weight: bold;">제목</th>
 						         <td style="text-align:left;">${qna_title }
 						         	<input type="hidden" id="qna_cd" name="qna_cd" value="${qna_cd }">
 						         <!-- 
@@ -124,38 +124,41 @@
 						         -->
 						         </td>
 						     </tr> 
+						     <tr></tr>
 						     <tr>    
-						         <th style="text-align:center; font-weight: bold;">등록일자</th>
-						         <td style="text-align:left;">
-						         	<%-- ${qna_date } --%>
-			                		<fmt:parseDate value="${qna_date }" var="qna_date" pattern="yyyy-mm-dd" />
-									<fmt:formatDate value="${qna_date}" pattern="yyyy-mm-dd" />
-						         </td>
-						     </tr>  
-						     <tr>    
-						         <th style="text-align:center; font-weight: bold;">내용</th>
+						         <th style="font-weight: bold;">내용</th>
 						         <td style="text-align:left;">${qna_cont }
 						         <!-- 
 						         	<textarea name="content" rows="10" cols="60" readonly="readonly">${qna_cont }</textarea>
 						         -->
 						     	</td>    
 						     </tr> 
+						     <tr></tr>
+						     <tr>    
+						         <th style="font-weight: bold;">등록일자</th>
+						         <td style="text-align:left;">
+						         	<%-- ${qna_date } --%>
+			                		<fmt:parseDate value="${qna_date }" var="qna_date" pattern="yyyy-mm-dd" />
+									<fmt:formatDate value="${qna_date}" pattern="yyyy-mm-dd" />
+						         </td>
+						     </tr>  
 						</table>
 				</div>
+				<hr/>
+				
 				
 				<!-- 관리자 답변 -->
 				<div class="container">
-					<div class="row" >
-						<div class="col-2" style="margin-top: 30px; text-align: right; font-weight: bold; font-size: 18px;" >
-							답변
+					<div class="row">
+						<div class="col-2" style="margin-top: 20px; text-align: center;">
+							<img src="./img3/operator.png" width="50px;">
+							<br>
+							<span style="font-weight: bold; font-size: 17px;">답변</span>
 						</div>
-						<div class="col-8" style="margin-top: 20px;" >
+						<div class="col-8" style="margin-top: 20px;">
 							<div class="input-group">
-								   <input type="text"  value="${ad_ansr_cont }" class="form-control" style="height: 70px; border: 1px solid;" readonly="readonly">
+								   <input type="text" value="${ad_ansr_cont }" class="form-control" style="height: 70px; border: 1px solid;" readonly="readonly">
 							</div>
-						</div><!-- /.col-sm-8 -->
-						<div class="col-2" style="margin-top: 20px;" >
-							<img src="./img3/operator.png" width="80px;">
 						</div>
 					</div>
 					<br>
@@ -164,13 +167,10 @@
 				
 				<div class="row">
 						<div class="col-12" style="margin-top: 20px;">
-								
 								<button type="button" id="qnaUpdate-btn" class="btn btn-primary" style="background-color: lightgray; 
 								float: right;" value="${qna_cd }">수정하기</button>
-								
 								<button type="button" id="qnaDelete-btn" class="btn btn-secondary" style="background-color: skyblue; 
 								float: right;" value="${qna_cd }">삭제하기</button>
-						
 								<button type="button" class="btn btn-third" style="background-color: #1fa766; float: right; color: white;"
 								onclick="location.href='./userqnalist.action'">목록가기</button>
 						</div>
