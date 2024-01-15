@@ -1276,11 +1276,9 @@ public class UserController
 	   	
 	    // set
 	 	dto.setQna_cd(qna_cd);
-	 
 	 	
 	 	// qna_cd 가지고 dao 에 있는 select 쿼리 실행 후 문의글 한 건 데이터 조회한 결과 -> dto에 set
 	 	dto = dao.userQnaSelect(dto);   
-	 		
 	 	
 	 	// 조회한 값 add 후 UserQnaCont.jsp에서 el 사용
 	 	model.addAttribute("user_dstn_cd", dto.getUser_dstn_cd());

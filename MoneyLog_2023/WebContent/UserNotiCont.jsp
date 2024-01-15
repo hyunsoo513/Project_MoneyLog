@@ -30,48 +30,60 @@
             </nav>            
         </div>
     
-	<!-- 코드 들어가기 -->	
-		<!-- 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12" id="List_title" style="margin-top: 30px;">
-					공지사항
+				<div class="col-12" id="List_title" style="margin-top: 30px;" >
+					<div style="font-size: 20px; font-weight: bold; margin-left: 20px;">공지사항</div>
+					<hr>
 				</div>
 			</div>
 		</div>
-		-->
+		
 		<div class="container">
 				<div class="row">
 				
-						<table id="cont" class="table2 col-12">
+						<table id="cont" class="table4 col-12" style ="margin-left: 25px; border-collapse: separate; border-spacing: 0 8px;">
 						     <tr>
-						         <th>작성일</th>
-						      	 <td>
+						         <th style="font-weight: bold; width: 120px;">작성일</th>
+						      	 <td style="text-align:left;">
 									<fmt:parseDate value="${userNotiSelect.noti_date }" var="noti_date" pattern="yyyy-mm-dd" />
-									<fmt:formatDate value="${noti_date}" pattern="yyyy-mm-dd" />						      	 <td>
+									<fmt:formatDate value="${noti_date}" pattern="yyyy-mm-dd" />
 								 </td>
 						     </tr>
 						     <tr>    
-						         <th>조회수</th>
-						         <td>
+						         <th style="font-weight: bold; width: 120px;">조회수</th>
+						         <td style="text-align:left;">
+							         ${userNotiSelect.noti_view }
+						         	<!-- 
 						         	<input type="text" id="noti_view" name="noti_view" value="${userNotiSelect.noti_view }">
+						         	 -->
 						         </td>
 						     </tr>  
 						     <tr>    
-						     <tr>    
-						         <th>제목</th>
-						         <td>
+						         <th style="font-weight: bold; width: 120px;">제목</th>
+						         <td style="text-align:left;">
+							         ${userNotiSelect.noti_title }
+						         	<!-- 
 						         	<input type="text" id="noti_title" name="noti_title" value="${userNotiSelect.noti_title }">
+						         	 -->
 						         </td>
 						     </tr>  
 						     <tr>    
-						         <th>내용</th>
-						         <td>
+						         <th style="font-weight: bold; width: 120px;">내용</th>
+						         <td style="text-align:left;">
+							         ${userNotiSelect.noti_cont }
+						         	<!-- 
 						         	<textarea name="content" rows="10" cols="60" readonly="readonly">${userNotiSelect.noti_cont }</textarea>
+						         	 -->
 						     	 </td>    
 						     </tr>
 						</table>
 				</div>			
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
 				
 				<div class="row">
 					<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
