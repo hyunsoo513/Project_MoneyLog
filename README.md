@@ -1,13 +1,16 @@
 # MoneyLog
 
 ## 개요
-![개요](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%80%E1%85%A2%E1%84%8B%E1%85%AD.png?raw=true)
+- 쓰고 공유할수록 정확해지는 가계부 웹 애플리케이션
 
 ## 구현목표
-![구현목표](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%86%E1%85%A9%E1%86%A8%E1%84%91%E1%85%AD.png?raw=true)
+[구현목표]
+- 가계부 기록을 통한 지출 회고
+- 가계부 분석으로 소비 패턴 및 비율 파악
+- 가계부 공유로 다양한 의견을 들을 수 있는 플랫폼 제공
 
 ## 개발환경
-![개발환경](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%80%E1%85%A2%E1%84%87%E1%85%A1%E1%86%AF%E1%84%92%E1%85%AA%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC.png?raw=true)
+[개발환경]
 - Eclipse
 - GitHub
 - Oracle SQL Developer
@@ -27,19 +30,18 @@
 - jQuery
 
 ## ERD 설계
-![erd](https://github.com/yesaroun/MoneyLog/blob/main/docs/DB%E1%84%86%E1%85%A9%E1%84%83%E1%85%A6%E1%86%AF%E1%84%85%E1%85%B5%E1%86%BC_%E1%84%86%E1%85%A5%E1%84%82%E1%85%B5%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3.png?raw=true)
+[erd]
 
 ## DB모델링 / 테이블명세서
-[DB모델링_테이블명세서](https://github.com/yesaroun/MoneyLog/blob/main/docs/DB모델링_테이블명세서_머니로그.pdf)
+[DB모델링_테이블명세서]
 
 ## 파일 구조도
-[파일_구조도](https://github.com/yesaroun/MoneyLog/blob/main/docs/파일_구조도_머니로그.pdf)
+[파일_구조도]
 
 ## 순서도
-![순서도](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%89%E1%85%AE%E1%86%AB%E1%84%89%E1%85%A5%E1%84%83%E1%85%A9.png?raw=true)
+[순서도]
 
 ## 특징
-![특징1](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%90%E1%85%B3%E1%86%A8%E1%84%8C%E1%85%B5%E1%86%BC1.png?raw=true)
-![특징2](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%90%E1%85%B3%E1%86%A8%E1%84%8C%E1%85%B5%E1%86%BC2.png?raw=true)
-![특징3](https://github.com/yesaroun/MoneyLog/blob/main/docs/imgs/%E1%84%90%E1%85%B3%E1%86%A8%E1%84%8C%E1%85%B5%E1%86%BC3.png?raw=true)
-
+[특징1]
+[특징2]
+[특징3]
