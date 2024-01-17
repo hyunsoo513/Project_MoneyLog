@@ -32,11 +32,11 @@
     
 		<div class="container">
 			<div class="row">
-				<div class="col-12" id="List_title" style="margin-top: 30px;" >
+				<div class="col-12" style="margin-top: 30px;" >
 					<div style="font-size: 20px; font-weight: bold; margin-left: 20px;">공지사항</div>
-					<hr>
 				</div>
 			</div>
+		<hr/>
 		</div>
 		
 		<div class="container">
@@ -79,38 +79,37 @@
 						     </tr>
 						</table>
 				</div>			
+				<hr/>
 				<br>
 				<br>
 				<br>
 				<br>
 				<br>
+		</div>
+		<div>
+			<div class="row">
+				<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
+					<table class="table4">
+						<tr>
+							<td>이전글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</td>
+						</tr>
+						<tr>
+							<td>다음글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</td>
+						</tr>
+					</table>
+					<!-- 
+					<a>이전글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a>
+					<a>다음글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a>
+					 -->
+				</div>
+			</div>	
 				
-				<div class="row">
-					<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
-						<table class="table3">
-							<tr>
-								<td>이전글 : (${userNotiSelect.noti_cd}) 머니로그 가계부 관련 공지사항입니다.</td>
-							</tr>
-						</table>
+			<div class="row">
+					<div class="col-12" style="margin-top: 20px;">
+							<button type="submit" class="btn btn-primary" style="background-color: #1fa766; float: right;"
+							onclick="javascript:location.href='<%=cp%>/usernotilist.action'">목록</button>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
-						<table class="table3">
-							<tr>
-								<td>다음글 : (${userNotiSelect.noti_cd}) 머니리뷰 관련 공지사항입니다.</td>
-							</tr>
-						</table>
-					</div>
-				</div>	
-					
-				<div class="row">
-						<div class="col-12" style="margin-top: 20px;">
-								<button type="submit" class="btn btn-primary" style="background-color: #1fa766; float: right;"
-								onclick="javascript:location.href='<%=cp%>/usernotilist.action'">목록</button>
-						</div>
-				</div>
-
+			</div>
 		</div>
 	</div>				
 

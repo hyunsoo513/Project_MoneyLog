@@ -101,7 +101,7 @@
 				                <td>
 				                	<a href="./usernotiselect.action?noti_cd=${userNoti.noti_cd}" style="color: #000000;">${userNoti.noti_title }</a>
 			                	</td>
-				                <td class="mobile" style="text-align:center;">머니리뷰 관리자</td>
+				                <td class="mobile" style="text-align:center;">관리자</td>
 				                <td class="mobile" style="text-align:center;">
 				                	<fmt:parseDate value="${userNoti.noti_date }" var="noti_date" pattern="yyyy-mm-dd" />
 									<fmt:formatDate value="${noti_date}" pattern="yyyy-mm-dd" />
