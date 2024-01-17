@@ -91,6 +91,7 @@
 				<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
 					<table class="table4">
 						<tr>
+							<!-- dao 추가해서 이전글 가져오는 쿼리 만들어야함 -->
 							<td>이전글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</td>
 						</tr>
 						<tr>
