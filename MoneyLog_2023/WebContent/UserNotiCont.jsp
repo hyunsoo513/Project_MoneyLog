@@ -88,20 +88,18 @@
 		</div>
 		<div>
 			<div class="row">
-				<div class="col-12" style="margin-top: 10px; padding-left: 30px;">				
+				<div class="col-12" style="margin-top: 10px;">				
 					<table class="table4">
 						<tr>
 							<!-- dao 추가해서 이전글 가져오는 쿼리 만들어야함 -->
-							<td>이전글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</td>
+							<td style="width: 120px;">이전글</td>
+							<td><a href="">(${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a></td>
 						</tr>
 						<tr>
-							<td>다음글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</td>
+							<td style="width: 120px;">다음글</td>
+							<td><a href="">(${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a></td>
 						</tr>
 					</table>
-					<!-- 
-					<a>이전글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a>
-					<a>다음글 : (${userNotiSelect.noti_cd}) ${userNotiSelect.noti_title }</a>
-					 -->
 				</div>
 			</div>	
 				
