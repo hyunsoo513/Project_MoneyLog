@@ -46,26 +46,29 @@
             
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdPostReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;"></a>
+                                                    <a href="AdPostReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;">
                                                     <!-- <h5>미처리된 게시글 신고</h5> -->
-                                                    <h5>게시글 신고</h5>
-                                                    <h3>${countPostRept }</h3>
+                                                    	<h5>게시글 신고</h5>
+                                                    	<h3>${countPostRept }</h3>
+                                                    </a>
                                                 </div>
                                                 
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdCmntReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;"></a>
+                                                    <a href="AdCmntReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;">
                                                     <!-- <h5>미처리된 댓글 신고</h5> -->
-                                                    <h5>댓글 신고</h5>
-                                                    <h3>${countCmntRept }</h3>
+                                                    	<h5>댓글 신고</h5>
+                                                    	<h3>${countCmntRept }</h3>
+                                                    </a>
                                                 </div>
             
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdQnaList.jsp"><img src="./img/edit.svg" style="margin-bottom: 10px;"></a>
+                                                    <a href="AdQnaList.jsp"><img src="./img/edit.svg" style="margin-bottom: 10px;">
                                                     <!-- <h5>미답변된 문의</h5> -->
-                                                    <h5>문의글</h5>
-                                                    <h3>${countQna }</h3>
+	                                                    <h5>문의글</h5>
+	                                                    <h3>${countQna }</h3>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -127,14 +130,11 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="list-group mt-3">
-                                        <!-- <a href="#" class="list-group-item active">신규 회원</a> -->
-                                        <br><br>
+                                        <br>
                                         <h4>회원 현황&nbsp&nbsp<small>머니로그 신규 회원 및 총 회원</small></h4>
-                
                                         <div class="list-group-item">
                                             <canvas id="lineChart"></canvas>
                                         </div>
-                
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
                                     <div class="list-group">
                                         <!-- <a href="#" class="list-group-item active">회원 현황</a> -->
                                         <br><br>
-                                        <h4>신규회원 현황<small></small></h4>
+                                        <h4>가입회원 현황</h4>
                 
                                         <div class="list-group-item">
                                             <div class="list-group  table-container">
@@ -175,7 +175,7 @@
                                     <div class="list-group">
                                         <!-- <a href="#" class="list-group-item active">머니리뷰 현황</a> -->
                                         <br><br>
-                                        <h4>머니로그 현황<small></small></h4>
+                                        <h4>머니리뷰 현황<small></small></h4>
                 
                                         <div class="list-group-item">
                                             <div class="list-group  table-container">
@@ -191,7 +191,7 @@
                                                         </tr>
                                                         
                                                         <tr>
-                                                            <td class="post-column" >${contentCount }</td>
+                                                            <td class="post-column" ><a href="./adpostlist.action?pageNum=1">${contentCount }</a></td>
                                                             <td class="post-column mobile" >${newContentCount }</td>
                                                             <td class="post-column mobile" >${reptContentCount }</td>
                                                             <td class="post-column mobile" >${reptCmntCount }</td>
