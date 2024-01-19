@@ -93,7 +93,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE AA.AD_ANSR_CD IS NULL
 	</select>
 
-	<!-- ===============================================윤태 추가 -->
 	<!-- 관리자 메인 페이지 공지사항 리스트 조회 -->
 	<select id="mainNotiList" resultType="com.test.mvc.UserDTO">
 		SELECT NOTI_CD, NOTI_TITLE, NOTI_DATE
@@ -181,10 +180,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
             FROM AD_INFO
             WHERE AD_ID = #{ad_id}) = #{ad_pw}
 	</select>
-	
-	<!-- 윤태 끝========================================================================================-->
-	
-	<!-- 현지 추가=======================================================================================-->
+
 	
 	<!-- 회원 목록 조회 (탈퇴, 영구정지회원 제외)-->
 	<select id="adUserList" resultType="com.test.mvc.AdminDTO">

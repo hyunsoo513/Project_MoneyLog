@@ -40,29 +40,32 @@
                                 <div class="col-md-12">
                                     <div class="list-group">
                                         <br>
-                                        <h4>오늘의 할일<small>  오늘 접수된 신고와 문의사항입니다.</small></h4>
+                                        <h4>오늘의 할일&nbsp&nbsp<small>미처리 신고 및 문의사항</small></h4>
                                         <div class="list-group-item">
                                             <div class="row m-1">
             
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdPostReptList.jsp"><img src="./img/event.svg"></a>
+                                                    <a href="AdPostReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;"></a>
+                                                    <!-- <h5>미처리된 게시글 신고</h5> -->
+                                                    <h5>게시글 신고</h5>
                                                     <h3>${countPostRept }</h3>
-                                                    <h5>미처리된 게시글 신고</h5>
                                                 </div>
                                                 
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdCmntReptList.jsp"><img src="./img/event.svg"></a>
+                                                    <a href="AdCmntReptList.jsp"><img src="./img/event.svg" style="margin-bottom: 10px;"></a>
+                                                    <!-- <h5>미처리된 댓글 신고</h5> -->
+                                                    <h5>댓글 신고</h5>
                                                     <h3>${countCmntRept }</h3>
-                                                    <h5>미처리된 댓글 신고</h5>
                                                 </div>
             
                                                 <!-- 이미지 -->
                                                 <div class="col-md-4 text-center p-5">
-                                                    <a href="AdQnaList.jsp"><img src="./img/edit.svg"></a>
+                                                    <a href="AdQnaList.jsp"><img src="./img/edit.svg" style="margin-bottom: 10px;"></a>
+                                                    <!-- <h5>미답변된 문의</h5> -->
+                                                    <h5>문의글</h5>
                                                     <h3>${countQna }</h3>
-                                                    <h5>미답변된 문의</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -77,7 +80,7 @@
                                 <div class="col-md-12">
                                     <div class="list-group">
                                         <br><br>
-                                        <h4>공지사항<small> 페이지를 관리하세요.</small></h4>
+                                        <h4>공지사항&nbsp&nbsp<small>작성 글 확인</small></h4>
             
                                         <div class="list-group-item">
                                             <div class="list-group table-container">
@@ -126,7 +129,7 @@
                                     <div class="list-group mt-3">
                                         <!-- <a href="#" class="list-group-item active">신규 회원</a> -->
                                         <br><br>
-                                        <h4>회원 현황<small>  머니로그 신규 회원과 총 회원을 확인해보세요.</small></h4>
+                                        <h4>회원 현황&nbsp&nbsp<small>머니로그 신규 회원 및 총 회원</small></h4>
                 
                                         <div class="list-group-item">
                                             <canvas id="lineChart"></canvas>
@@ -156,7 +159,7 @@
                                                         </tr>
                                                         
                                                         <tr>
-                                                            <td class="member-column">${userCount }</td>
+                                                            <td class="member-column"><a href="./aduserlist.action">${userCount }</a></td>
                                                             <td class="member-column mobile">${newUserCount }</td>
                                                             <td class="member-column mobile">${leaveUserCount }</td>
                                                         </tr>

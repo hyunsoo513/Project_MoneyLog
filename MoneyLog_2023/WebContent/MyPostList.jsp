@@ -108,8 +108,6 @@
 					</div>
 				</div>
 				
-				
-				<!-- 밑에 공백만드는용 ㅠ -->
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -120,7 +118,7 @@
 
 
 	<footer class="bg-dark mt-4 p-5 text-center" style="color: #FFFFFF;">
-		머니로그의 푸터 부분입니다. </footer>
+		MoneyLog. </footer>
 
 
 	<!-- 제이쿼리 자바스크립트 추가하기 -->

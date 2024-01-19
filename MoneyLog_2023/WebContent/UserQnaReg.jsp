@@ -151,9 +151,13 @@
 				            					<input type="text" id="qna_date"  name="qna_date" value="${qna_date }" style="padding-left:15px; width: 500px; height:35px; background-color: #EAE7E7; border:0 solid black;" readonly="readonly">
 								        	</td>
 										</tr>
+										<tr>
+											<td colspan="2" align="center" style="text-align: center;">
+				            					<button type="button" class="btn btn-primary"  id="qnaReg-btn" style="background-color: #1fa766; display: inline; margin-right: 20px; margin-top: 50px;">등록하기</button>
+												<button type="reset" class="btn btn-secondary" style="background-color: #1fa766; display: inline; margin-top: 50px;" onclick="location.href='./userqnalist.action'">취소하기</button>
+											</td>
+										</tr>
 									</table>
-	            					<button type="button" class="btn btn-primary"  id="qnaReg-btn" style="background-color: #1fa766; float: right;">등록하기</button>
-									<button type="reset" class="btn btn-secondary" style="background-color: #1fa766; float: right;" onclick="location.href='./userqnalist.action'">취소하기</button>
 								</form>
 							</div>
 						</div>
