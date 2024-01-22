@@ -61,7 +61,7 @@
 									<c:if test="${not empty adNotiList}">
 		                			<c:forEach var="adNoti" items="${adNotiList }" varStatus="status">
 		                			<tr>
-			                			<td scope="row" class="mobile" style="text-align:center;">${adNoti.rownum }</td>
+			                			<td scope="row" class="mobile" style="text-align:center;">${adNoti.rnum }</td>
 			                			<td><a href="./adnoticont.action?noti_cd=${adNoti.noti_cd }" style="color: #000000;">${adNoti.noti_title }</a></td>
 			                			<td class="mobile" style="text-align:center;">${adNoti.ad_id }</td>
 			                			<td class="mobile" style="text-align:center;">

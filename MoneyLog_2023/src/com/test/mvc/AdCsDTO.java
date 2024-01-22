@@ -6,7 +6,7 @@ public class AdCsDTO
 	public String ad_cd, ad_id, ad_pw, ad_date;
 	
 	// 공지사항 등록
-	public String rownum, noti_cd, noti_title, noti_cont, noti_date, noti_view, noti_pin;
+	public String rnum, noti_cd, noti_title, noti_cont, noti_date, noti_view, noti_pin;
 	
 	// 이용자 문의글 등록
 	public String qna_cd, user_dstn_cd, qna_title, qna_cont, qna_view, qna_date;
@@ -61,14 +61,14 @@ public class AdCsDTO
 		this.ad_date = ad_date;
 	}
 
-	public String getRownum()
+	public String getRnum()
 	{
-		return rownum;
+		return rnum;
 	}
 
-	public void setRownum(String rownum)
+	public void setRnum(String rnum)
 	{
-		this.rownum = rownum;
+		this.rnum = rnum;
 	}
 
 	public String getNoti_cd()
