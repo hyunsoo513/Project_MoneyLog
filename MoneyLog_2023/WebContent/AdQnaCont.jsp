@@ -75,9 +75,9 @@
                 <main id="adNotiList">
                     <section>
                         <div class="row">
-                            <div class="col-12" id="List_title" style="margin-top: 30px;" >
+                            <div class="col-12" id="List_title" style="margin-top: 10px;" >
                                 <div class="list-title">
-                                    문의글(관리자)
+                                    문의글
                                 </div>
                             </div>
                         </div>
@@ -87,28 +87,32 @@
                             <table id="cont" class="table2 col-12">
                                     <tr>
                                         <th>제목</th>
-                                        <td>
+                                        <td style="margin-left:15px;">${adQnaView.qna_title }</td>
+                                        <!-- 
                                         <input type="text" value="${adQnaView.qna_title }" style="padding-left:15px; width: 500px; height:35px; border: 0px;" readonly="readonly">
-                                        <td>
+                                         -->
                                     </tr>
                                     <tr>    
-                                        <th>문의자</th>
-                                        <td>
+                                        <th>문의자(이메일)</th>
+                                        <td style="margin-left:15px;">${adQnaView.user_name }(${adQnaView.user_id })</td>
+                                        <!-- 
                                         <input type="text"  value="${adQnaView.user_name }" style="padding-left:15px; width: 500px; height:35px; border:0 solid black;" readonly="readonly">
                                         <input type="text"  value="${adQnaView.user_id }" style="padding-left:15px; width: 500px; height:35px; border:0 solid black;" readonly="readonly">
-                                        </td>
+                                         -->
                                     </tr>
                                     <tr>    
                                         <th>문의일자</th>
-                                        <td>
+                                        <td style="margin-left:15px;">${adQnaView.qna_date }</td>
+                                        <!-- 
                                         <input type="text" value="${adQnaView.qna_date }" style="padding-left:15px; width: 500px; height:35px; border:0 solid black;" readonly="readonly">
-                                        </td>
+                                         -->
                                     </tr>
                                     <tr>    
                                         <th>내용</th>
-                                        <td>
+                                        <td style="margin-left:15px;">${adQnaView.qna_cont }</td>
+                                        <!-- 
                                         <textarea name="content" rows="10" cols="60" class="textarea" readonly="readonly">${adQnaView.qna_cont }</textarea>
-                                    </td>    
+                                         -->
                                     </tr>
                             </table>
                         </div>

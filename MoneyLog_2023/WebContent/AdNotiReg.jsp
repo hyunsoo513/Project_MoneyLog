@@ -105,13 +105,12 @@
 									<td>
 										<div class="form-check">
 										<input type="radio" class="btn-check" name="noti_pin" id="noti_pin1" value="Y">
-										<label class="btn btn-secondary" for="noti_pin1">
+										<label for="noti_pin1">
 											상단고정 활성화
 										</label>
 											
-											
 										<input type="radio" class="btn-check" name="noti_pin" id="noti_pin2" value="N" checked>
-										<label class="btn btn-secondary" for="noti_pin2">
+										<label for="noti_pin2">
 											상단고정 비활성화
 										</label>
 										</div>	

@@ -37,7 +37,7 @@
                 <main id="adNotiList">
                     <section>
                         <div class="row">
-                            <div class="col-12" id="List_title" style="margin-top: 30px;" >
+                            <div class="col-12" id="List_title" style="margin: 10px;" >
                                 <div class="list-title">
                                         문의사항
                                 </div>
@@ -65,7 +65,7 @@
 									<c:if test="${not empty adQnaList}">
 		                			<c:forEach var="adQna" items="${adQnaList }" varStatus="status">
 		                			<tr>
-			                			<td scope="row" class="mobile" style="text-align:center;">${adQna.rownum }</td>
+			                			<td scope="row" class="mobile" style="text-align:center;">${adQna.rnum }</td>
 			                			<%-- <td><a href="./adqnacont.action?qna_cd=${adQna.qna_cd }"" style="color: #000000;">${adQna.qna_title }</a></td> --%>
 												                			
 			                			<c:choose>

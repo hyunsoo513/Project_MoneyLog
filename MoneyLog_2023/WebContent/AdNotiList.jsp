@@ -33,7 +33,7 @@
                 <main id="adNotiList">
                     <section>
                         <div class="row">
-                            <div class="col-12 notice-title">
+                            <div class="col-12 notice-title" style="margin: 10px;">
                                 <div class="list-title">
                                         공지사항
                                 </div>
