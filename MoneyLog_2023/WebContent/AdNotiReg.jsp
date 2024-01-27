@@ -91,7 +91,7 @@
                     <section>
                         <div class="row">
                             <div class="col-12 notice-title">
-                                <div class="list-title">
+                                <div class="list-title" style="margin: 10px;">
 									공지사항
                                 </div>
                             </div>

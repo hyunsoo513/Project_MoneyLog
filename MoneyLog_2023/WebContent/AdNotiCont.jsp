@@ -41,8 +41,8 @@
                     <section>
                         <div class="row">
                             <!-- <div class="col-12 notice-title" id="List_title"> -->
-                            <div class="col-12 notice-title">
-                                <div class="list-title">
+                            <div class="col-12 notice-title" >
+                                <div class="list-title" style="margin: 10px;">
                                     공지사항(관리자)
                                 </div>
                             </div>
@@ -81,8 +81,11 @@
                                     </tr>
                                     <tr>
                                         <th>내용</th>
-                                        <td colspan="4">
+                                        <td colspan="4" style="height: 200px;">
+                                       	 	${adNotiView.noti_cont }
+                                        	<!--  
                                             <textarea class="table-content" name="content" rows="10" cols="60" readonly="readonly">${adNotiView.noti_cont }</textarea>
+                                            -->
                                         </td>   
                                     </tr>
                                 </table>
@@ -106,7 +109,7 @@
                                 data-toggle="modal" data-target="#modal">삭제하기</button>
                                 
                                 <button type="submit" class="btn btn-third return-btn"
-                                onclick="javascript:location.href='<%=cp%>/adnotilist.action'">돌아가기</button>
+                                onclick="javascript:location.href='<%=cp%>/adnotilist.action?pageNum=1'">돌아가기</button>
                             </div>
                         </div>
                     </section>
