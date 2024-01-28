@@ -109,7 +109,7 @@
                                     </tr>
                                     <tr>    
                                         <th>내용</th>
-                                        <td style="margin-left:15px;">${adQnaView.qna_cont }</td>
+                                        <td style="margin-left:15px; height: 200px;">${adQnaView.qna_cont }</td>
                                         <!-- 
                                         <textarea name="content" rows="10" cols="60" class="textarea" readonly="readonly">${adQnaView.qna_cont }</textarea>
                                          -->
@@ -128,7 +128,7 @@
                                 
                                 <input type="text" id="newAnswer" class="form-control" style="height: 70px; border: 1px solid;" placeholder="내용을 입력해주세요.">
                                     <span class="input-group-btn">
-                                     	<button class="btn btn-default" type="button" id="QnaRegBtn" style="background-color: skyblue; color: white;" data-toggle="modal" data-target="#modal">답변</button>
+                                     	<button class="btn btn-default" type="button" id="QnaRegBtn" style="background-color: skyblue; color: white;" data-toggle="modal" data-target="#modal">등록</button>
                                         <button class="btn btn-default" type="button" style="background-color: #F5CAC3; color: white;" disabled> 수정</button>
                                         <button class="btn btn-default" type="button" style="background-color: lightgray; color: white;" onclick="javascript:location.href='<%=cp%>/adqnalist.action'">목록</button>
                                     	

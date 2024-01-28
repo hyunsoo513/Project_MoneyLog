@@ -99,7 +99,7 @@
                                 <input type="text" id="newAnswer" class="form-control" style="height: 70px; border: 1px solid;" value="${adQnaView.ad_ansr_cont }" disabled>
 
                                     <span class="input-group-btn">
-                                     	<button class="btn btn-default" type="button" id="QnaRegBtn" style="background-color: skyblue; color: white;" disabled>답변</button>
+                                     	<button class="btn btn-default" type="button" id="QnaRegBtn" style="background-color: skyblue; color: white;" disabled>등록</button>
                                         <button class="btn btn-default" type="button" style="background-color: #F5CAC3; color: white;" onclick="javascript:location.href='<%=cp%>/adqnaupdateform.action?qna_cd=<%=qna_cd%>&ad_ansr_cd=${adQnaView.ad_ansr_cd }'"> 수정</button>
                                         <button class="btn btn-default" type="button" style="background-color: lightgray; color: white;" onclick="javascript:location.href='<%=cp%>/adqnalist.action'">목록</button>
                                     </span>
