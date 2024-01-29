@@ -176,9 +176,12 @@
                                                 <tr>
                                                     <td colspan="12">
                                                         <button class="btn send-content-btn" data-toggle="modal" data-target="#modal" name="post_cd" 
-                                                         onclick="location.href='./admoneypost.action?post_cd=<fmt:formatNumber value="${adPostRept.post_cd}" type="number"/>'">
+                                                         onclick="window.open('./admoneypost.action?post_cd=${adPostRept.post_cd}')">
                                                             게시글 보러가기
                                                         </button>
+														<!-- 	
+                                                         onclick="location.href='./admoneypost.action?post_cd=<fmt:formatNumber value="${adPostRept.post_cd}" type="number"/>'">
+                                                          -->
                                                     </td>
                                                 </tr>
                                             </tbody>
