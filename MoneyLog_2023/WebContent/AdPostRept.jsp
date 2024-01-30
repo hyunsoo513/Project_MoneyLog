@@ -179,7 +179,7 @@
                                                          onclick="window.open('./admoneypost.action?post_cd=${adPostRept.post_cd}')">
                                                             게시글 보러가기
                                                         </button>
-														<!-- 	
+														<!--
                                                          onclick="location.href='./admoneypost.action?post_cd=<fmt:formatNumber value="${adPostRept.post_cd}" type="number"/>'">
                                                           -->
                                                     </td>
