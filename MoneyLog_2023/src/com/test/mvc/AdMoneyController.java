@@ -364,7 +364,7 @@ public class AdMoneyController
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("user_dstn_cd", -1);
 		mv.addObject("ad_cd", ad_cd);
-		mv.setViewName("/MoneyPost.jsp");
+		mv.setViewName("/AdMoneyPost.jsp");
 		mv.addObject("postFind", dao.postFind(money));
 		mv.addObject("postCount", -1);
 		mv.addObject("inOutList", dao.inOutList(money));
